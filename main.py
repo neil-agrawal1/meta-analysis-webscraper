@@ -16,27 +16,12 @@ with open('wbtbpapers.csv', 'w', encoding="utf8", newline='') as f:
     header = ["Title", "Authors", "Year", "Journal", "Abstract", "DOI"]
     thewriter.writerow(header)
 
-    for i in range(20): 
+    for i in range(200): 
         publication = next(search_query)
-        # print(type(list(publication['bib'].values())))
         fullpublication = publication['bib']
-        fullpublication['DOI'] = publication["pub_url"]
+        if ("pub_url" in publication):
+            fullpublication['DOI'] = publication["pub_url"]
+        else: 
+            fullpublication['DOI'] = "None"
         thewriter.writerow(list(fullpublication.values()))
 
-
-    
-
-
-# publication = next(search_query)
-# publication2 = next(search_query)
-# print(publication['bib'])
-# print(publication2['bib'])
-
-# information = publication['bib']
-# Title = information['title']
-# Abstract = information['abstract']
-# Author = information['author']
-# Year = information['pub_year']
-
-# info = [Title, Abstract, Author, Year]
-# print(info) 
