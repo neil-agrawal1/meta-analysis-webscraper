@@ -1,7 +1,7 @@
 from scholarly import scholarly, ProxyGenerator
 from csv import writer
 
-API_KEY = "f20fd669a86729dfed87c341d6480197"
+API_KEY = "Your Key"
 pg = ProxyGenerator()
 success = pg.ScraperAPI(API_KEY)
 print(success)
