@@ -7,11 +7,9 @@ success = pg.ScraperAPI(API_KEY)
 print(success)
 scholarly.use_proxy(pg)
 
-hello = "meme"
+search_query = scholarly.search_pubs("what you want to search on google scholar")
 
-search_query = scholarly.search_pubs("wbtb lucid dreaming induction")
-
-with open('wbtbpapers.csv', 'w', encoding="utf8", newline='') as f:   
+with open('filename.csv', 'w', encoding="utf8", newline='') as f:   
     thewriter = writer(f)
     header = ["Title", "Authors", "Year", "Journal", "Abstract", "DOI"]
     thewriter.writerow(header)
