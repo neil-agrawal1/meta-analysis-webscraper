@@ -1,0 +1,1114 @@
+<?xml version="1.0"?>
+<!DOCTYPE PubmedArticleSet PUBLIC "-//NLM//DTD PubMedArticle, 1st January 2019//EN" "https://dtd.nlm.nih.gov/ncbi/pubmed/out/pubmed_190101.dtd">
+<PubmedArticleSet>
+    <PubmedArticle>
+        <MedlineCitation Status="Publisher" Owner="NLM">
+            <PMID Version="1">35759531</PMID>
+            <DateRevised>
+                <Year>2022</Year>
+                <Month>06</Month>
+                <Day>27</Day>
+            </DateRevised>
+            <Article PubModel="Print-Electronic">
+                <Journal>
+                    <ISSN IssnType="Electronic">1536-0539</ISSN>
+                    <JournalIssue CitedMedium="Internet">
+                        <PubDate>
+                            <Year>2022</Year>
+                            <Month>Jun</Month>
+                            <Day>27</Day>
+                        </PubDate>
+                    </JournalIssue>
+                    <Title>Journal of pain &amp; palliative care pharmacotherapy</Title>
+                    <ISOAbbreviation>J Pain Palliat Care Pharmacother</ISOAbbreviation>
+                </Journal>
+                <ArticleTitle>Lucid Dreams Associated with Pregabalin: Implications for Clinical Practice.</ArticleTitle>
+                <Pagination>
+                    <MedlinePgn>1-6</MedlinePgn>
+                </Pagination>
+                <ELocationID EIdType="doi" ValidYN="Y">10.1080/15360288.2022.2081754</ELocationID>
+                <Abstract>
+                    <AbstractText>Here, we describe a case of a patient with multiple myeloma who reported symptoms of lucid dreams. This patient was taking methadone for neoplasm related pain. The patient was also taking pregabalin which was initially started at dosing of 50 mg taken orally three times a day. Five days after initiation of pregabalin, the dosing was increased to 100 mg taken orally three times daily. The patient developed lucid dreams during a hospital stay and methadone was initially thought to be the cause of her lucid dreams. Methadone dosing was decreased with no success, and her lucid dreams persisted. On the patient's thirteenth day of hospital admission, the pregabalin dose was decreased from 100 mg three times a day to 75 mg twice daily. Five days later, the pregabalin was decreased from 75 mg twice daily to 50 mg twice daily. Pregabalin was continued for five more days and then discontinued. Resolution of the lucid dreams occurred following discontinuation of pregabalin. To our knowledge, this is the first reported case of an association between pregabalin and lucid dreams. Given that pregabalin is a widely used medication, we found this case to be relevant to describe this unique presentation.</AbstractText>
+                </Abstract>
+                <AuthorList CompleteYN="Y">
+                    <Author ValidYN="Y">
+                        <LastName>Haas</LastName>
+                        <ForeName>Meghan F</ForeName>
+                        <Initials>MF</Initials>
+                        <AffiliationInfo>
+                            <Affiliation>Meghan F. Haas, DO, FACOI, Jessica Latchman, ARNP, Ann M. Guastella, ARNP, David S. Craig, PharmD, and Young D. Chang, MD, are with theDepartment of Supportive Care, H. Lee Moffitt Cancer Center and Research Institute, Tampa, Florida, USA.</Affiliation>
+                        </AffiliationInfo>
+                    </Author>
+                    <Author ValidYN="Y">
+                        <LastName>Latchman</LastName>
+                        <ForeName>Jessica</ForeName>
+                        <Initials>J</Initials>
+                        <AffiliationInfo>
+                            <Affiliation>Meghan F. Haas, DO, FACOI, Jessica Latchman, ARNP, Ann M. Guastella, ARNP, David S. Craig, PharmD, and Young D. Chang, MD, are with theDepartment of Supportive Care, H. Lee Moffitt Cancer Center and Research Institute, Tampa, Florida, USA.</Affiliation>
+                        </AffiliationInfo>
+                    </Author>
+                    <Author ValidYN="Y">
+                        <LastName>Guastella</LastName>
+                        <ForeName>Ann M</ForeName>
+                        <Initials>AM</Initials>
+                        <AffiliationInfo>
+                            <Affiliation>Meghan F. Haas, DO, FACOI, Jessica Latchman, ARNP, Ann M. Guastella, ARNP, David S. Craig, PharmD, and Young D. Chang, MD, are with theDepartment of Supportive Care, H. Lee Moffitt Cancer Center and Research Institute, Tampa, Florida, USA.</Affiliation>
+                        </AffiliationInfo>
+                    </Author>
+                    <Author ValidYN="Y">
+                        <LastName>Craig</LastName>
+                        <ForeName>David S</ForeName>
+                        <Initials>DS</Initials>
+                        <AffiliationInfo>
+                            <Affiliation>Meghan F. Haas, DO, FACOI, Jessica Latchman, ARNP, Ann M. Guastella, ARNP, David S. Craig, PharmD, and Young D. Chang, MD, are with theDepartment of Supportive Care, H. Lee Moffitt Cancer Center and Research Institute, Tampa, Florida, USA.</Affiliation>
+                        </AffiliationInfo>
+                    </Author>
+                    <Author ValidYN="Y">
+                        <LastName>Chang</LastName>
+                        <ForeName>Young D</ForeName>
+                        <Initials>YD</Initials>
+                        <AffiliationInfo>
+                            <Affiliation>Meghan F. Haas, DO, FACOI, Jessica Latchman, ARNP, Ann M. Guastella, ARNP, David S. Craig, PharmD, and Young D. Chang, MD, are with theDepartment of Supportive Care, H. Lee Moffitt Cancer Center and Research Institute, Tampa, Florida, USA.</Affiliation>
+                        </AffiliationInfo>
+                    </Author>
+                </AuthorList>
+                <Language>eng</Language>
+                <PublicationTypeList>
+                    <PublicationType UI="D016428">Journal Article</PublicationType>
+                </PublicationTypeList>
+                <ArticleDate DateType="Electronic">
+                    <Year>2022</Year>
+                    <Month>06</Month>
+                    <Day>27</Day>
+                </ArticleDate>
+            </Article>
+            <MedlineJournalInfo>
+                <Country>England</Country>
+                <MedlineTA>J Pain Palliat Care Pharmacother</MedlineTA>
+                <NlmUniqueID>101125608</NlmUniqueID>
+                <ISSNLinking>1536-0288</ISSNLinking>
+            </MedlineJournalInfo>
+            <CitationSubset>IM</CitationSubset>
+            <KeywordList Owner="NOTNLM">
+                <Keyword MajorTopicYN="N">Pregabalin</Keyword>
+                <Keyword MajorTopicYN="N">This is a unique case presentation of a patient who was found to have lucid dreams which were thought to be associated with pregabalin use. Once pregabalin was tapered to discontinuation</Keyword>
+                <Keyword MajorTopicYN="N">cancer pain</Keyword>
+                <Keyword MajorTopicYN="N">lucid dreams</Keyword>
+                <Keyword MajorTopicYN="N">this patient’s lucid dreams resolved.</Keyword>
+            </KeywordList>
+        </MedlineCitation>
+        <PubmedData>
+            <History>
+                <PubMedPubDate PubStatus="entrez">
+                    <Year>2022</Year>
+                    <Month>6</Month>
+                    <Day>27</Day>
+                    <Hour>14</Hour>
+                    <Minute>2</Minute>
+                </PubMedPubDate>
+                <PubMedPubDate PubStatus="pubmed">
+                    <Year>2022</Year>
+                    <Month>6</Month>
+                    <Day>28</Day>
+                    <Hour>6</Hour>
+                    <Minute>0</Minute>
+                </PubMedPubDate>
+                <PubMedPubDate PubStatus="medline">
+                    <Year>2022</Year>
+                    <Month>6</Month>
+                    <Day>28</Day>
+                    <Hour>6</Hour>
+                    <Minute>0</Minute>
+                </PubMedPubDate>
+            </History>
+            <PublicationStatus>aheadofprint</PublicationStatus>
+            <ArticleIdList>
+                <ArticleId IdType="pubmed">35759531</ArticleId>
+                <ArticleId IdType="doi">10.1080/15360288.2022.2081754</ArticleId>
+            </ArticleIdList>
+        </PubmedData>
+    </PubmedArticle>
+    <PubmedArticle>
+        <MedlineCitation Status="PubMed-not-MEDLINE" Owner="NLM">
+            <PMID Version="1">35755904</PMID>
+            <DateRevised>
+                <Year>2022</Year>
+                <Month>07</Month>
+                <Day>16</Day>
+            </DateRevised>
+            <Article PubModel="Print">
+                <Journal>
+                    <ISSN IssnType="Print">1984-0659</ISSN>
+                    <JournalIssue CitedMedium="Print">
+                        <Volume>15</Volume>
+                        <Issue>2</Issue>
+                        <PubDate>
+                            <MedlineDate>2022 Apr-Jun</MedlineDate>
+                        </PubDate>
+                    </JournalIssue>
+                    <Title>Sleep science (Sao Paulo, Brazil)</Title>
+                    <ISOAbbreviation>Sleep Sci</ISOAbbreviation>
+                </Journal>
+                <ArticleTitle>'I love you': the first phrase detected from dreams.</ArticleTitle>
+                <Pagination>
+                    <MedlinePgn>149-157</MedlinePgn>
+                </Pagination>
+                <ELocationID EIdType="doi" ValidYN="Y">10.5935/1984-0063.20220035</ELocationID>
+                <Abstract>
+                    <AbstractText Label="Objective" NlmCategory="UNASSIGNED">Many people have dreams nightly and some maintain consciousness during dreams. Such dreams are referred to as lucid dreams (LD). During dreams, our speech correlates with facial muscle activity, which is hard to decode, but LD could solve this problem. The primary hypothesis of this study was that the facial muscles electric activity during LD corresponds to specific sounds. Understanding this connection could help decode dream speech in the future.</AbstractText>
+                    <AbstractText Label="Material and Methods" NlmCategory="UNASSIGNED">
+                        Under laboratory conditions, four LD practitioners were asked to say "
+                        <i>I love you</i>
+                        ", a phrase with a distinctive electromyographic (EMG) signature. They did this before falling asleep and then again after becoming conscious during a dream. Their facial and neck EMG was recorded in four areas.
+                    </AbstractText>
+                    <AbstractText Label="Results" NlmCategory="UNASSIGNED">
+                        All four volunteers accomplished the goal at least once. The patterns associated with the "
+                        <i>I love you</i>
+                        " phrase were observed in most cases, both during wakefulness and LD. Specifically, the "
+                        <i>I</i>
+                        " triggered distinctive phasic activity in the
+                        <i>submentalis</i>
+                        area most of the time, while "
+                        <i>you</i>
+                        " did the same in the
+                        <i>orbicularis oris</i>
+                        .
+                    </AbstractText>
+                    <AbstractText Label="Discussion" NlmCategory="UNASSIGNED">This study highlights the possibility of detecting only specific and highly EMG distinctive phrases from dreams because vocalization also involves a tong and vocal apparatus. The most interesting consequence of the present results is that they indicate the possibility of creating an artificial EMG language that could be instantly decoded in reality and used during LD.</AbstractText>
+                </Abstract>
+                <AuthorList CompleteYN="Y">
+                    <Author ValidYN="Y">
+                        <LastName>Raduga</LastName>
+                        <ForeName>Michael</ForeName>
+                        <Initials>M</Initials>
+                        <Identifier Source="ORCID">0000-0002-1320-2467</Identifier>
+                        <AffiliationInfo>
+                            <Affiliation>REMspace, Phase Research Center - Novorossiysk - Krasnodar Krai - Russia.</Affiliation>
+                        </AffiliationInfo>
+                    </Author>
+                </AuthorList>
+                <Language>eng</Language>
+                <PublicationTypeList>
+                    <PublicationType UI="D016428">Journal Article</PublicationType>
+                </PublicationTypeList>
+            </Article>
+            <MedlineJournalInfo>
+                <Country>Brazil</Country>
+                <MedlineTA>Sleep Sci</MedlineTA>
+                <NlmUniqueID>101598477</NlmUniqueID>
+                <ISSNLinking>1984-0063</ISSNLinking>
+            </MedlineJournalInfo>
+            <KeywordList Owner="NOTNLM">
+                <Keyword MajorTopicYN="N">Consciousness</Keyword>
+                <Keyword MajorTopicYN="N">Dreams</Keyword>
+                <Keyword MajorTopicYN="N">Language</Keyword>
+                <Keyword MajorTopicYN="N">Lucid Dreaming</Keyword>
+                <Keyword MajorTopicYN="N">REM</Keyword>
+                <Keyword MajorTopicYN="N">Sleep</Keyword>
+                <Keyword MajorTopicYN="N">Vocalization</Keyword>
+            </KeywordList>
+        </MedlineCitation>
+        <PubmedData>
+            <History>
+                <PubMedPubDate PubStatus="received">
+                    <Year>2021</Year>
+                    <Month>06</Month>
+                    <Day>25</Day>
+                </PubMedPubDate>
+                <PubMedPubDate PubStatus="accepted">
+                    <Year>2021</Year>
+                    <Month>10</Month>
+                    <Day>13</Day>
+                </PubMedPubDate>
+                <PubMedPubDate PubStatus="entrez">
+                    <Year>2022</Year>
+                    <Month>6</Month>
+                    <Day>27</Day>
+                    <Hour>3</Hour>
+                    <Minute>56</Minute>
+                </PubMedPubDate>
+                <PubMedPubDate PubStatus="pubmed">
+                    <Year>2022</Year>
+                    <Month>6</Month>
+                    <Day>28</Day>
+                    <Hour>6</Hour>
+                    <Minute>0</Minute>
+                </PubMedPubDate>
+                <PubMedPubDate PubStatus="medline">
+                    <Year>2022</Year>
+                    <Month>6</Month>
+                    <Day>28</Day>
+                    <Hour>6</Hour>
+                    <Minute>1</Minute>
+                </PubMedPubDate>
+            </History>
+            <PublicationStatus>ppublish</PublicationStatus>
+            <ArticleIdList>
+                <ArticleId IdType="pubmed">35755904</ArticleId>
+                <ArticleId IdType="doi">10.5935/1984-0063.20220035</ArticleId>
+                <ArticleId IdType="pmc">PMC9210561</ArticleId>
+            </ArticleIdList>
+            <ReferenceList>
+                <Reference>
+                    <Citation>Sleep Med Rev. 2018 Apr;38:141-157</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">28735779</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Eur J Neurol. 2001 Mar;8(2):185-9</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">11284998</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Sleep. 1984;7(1):52-63</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">6718925</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>J Sports Sci. 2016;34(1):27-34</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">25846062</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Front Neurol. 2012 Jul 04;3:106</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">22783222</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Front Psychol. 2011 Nov 18;2:286</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">22121353</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Int J Aging Hum Dev. 1983-1984;18(4):243-54</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">6676331</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Science. 1961 Sep 22;134(3482):840</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">17817398</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Sleep. 2009 Sep;32(9):1201-9</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">19750925</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Front Psychol. 2018 Sep 27;9:1856</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">30319519</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Conscious Cogn. 2016 Jul;43:197-215</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">27337287</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Science. 2013 May 3;340(6132):639-42</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">23558170</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Med Hypotheses. 2020 Nov;144:110169</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">32795836</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Neuropsychopharmacology. 2014 Jun;39(7):1594-602</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">24549103</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Arch Ital Biol. 1962;100:125-206</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">14452612</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Percept Mot Skills. 2005 Jun;100(3 Pt 2):925-38</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">16158679</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Curr Biol. 2021 Apr 12;31(7):1417-1427.e6</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">33607035</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Neurol Sci. 2012 Feb;33(1):169-72</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">21647627</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Arch Gen Psychiatry. 1962 Oct;7:235-58</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">13982370</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Sleep Sci. 2019 Jul-Sep;12(3):240-241</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">31890102</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Curr Biol. 2011 Oct 11;21(19):1641-6</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">21945275</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Neurol Clin. 2005 Nov;23(4):1107-26</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">16243618</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Front Psychol. 2020 Jun 25;11:1290</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">32670153</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Brain Sci. 2020 Jun 03;10(6):</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">32503215</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Psychophysiology. 1986 Mar;23(2):210-4</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">3704077</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Electroencephalogr Clin Neurophysiol. 1970 Apr;28(4):382-90</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">4191190</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>IEEE/ACM Trans Audio Speech Lang Process. 2017 Dec;25(12):2386-2398</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">29552581</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Trends Cogn Sci. 2010 Feb;14(2):88-100</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">20079677</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Front Psychol. 2019 Nov 26;10:2618</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">31849749</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Psychol Neuropsychiatr Vieil. 2010 Jun;8(2):87-96</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">20525540</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Sleep. 1992 Dec;15(6):562-6</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">1475572</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Nature. 2005 Oct 27;437(7063):1279-85</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">16251953</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Sleep Med Rev. 2011 Oct;15(5):311-5</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">21571556</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Behav Brain Sci. 2013 Dec;36(6):629; discussion 634-59</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">24304770</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>J Neurosci. 2018 Oct 24;38(43):9175-9185</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">30201768</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Med Hypotheses. 2014 Mar;82(3):286-90</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">24398162</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Percept Mot Skills. 1981 Jun;52(3):727-32</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">24171230</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Adv Neurol. 1995;67:245-71</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">8848973</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Front Neurosci. 2020 Apr 15;14:361</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">32351360</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>PLoS One. 2018 Aug 8;13(8):e0201246</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">30089135</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Sleep Med. 2021 Dec;88:221-230</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">34798438</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Science. 1953 Sep 4;118(3062):273-4</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">13089671</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Psychother Psychosom. 1997;66(1):50-5</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">8996716</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>J Adolesc Health. 2011 Nov;49(5):525-31</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">22018568</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Sleep. 2009 Sep;32(9):1191-200</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">19750924</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+            </ReferenceList>
+        </PubmedData>
+    </PubmedArticle>
+    <PubmedArticle>
+        <MedlineCitation Status="PubMed-not-MEDLINE" Owner="NLM">
+            <PMID Version="1">35645242</PMID>
+            <DateRevised>
+                <Year>2022</Year>
+                <Month>07</Month>
+                <Day>16</Day>
+            </DateRevised>
+            <Article PubModel="Electronic">
+                <Journal>
+                    <ISSN IssnType="Electronic">2624-5175</ISSN>
+                    <JournalIssue CitedMedium="Internet">
+                        <Volume>4</Volume>
+                        <Issue>2</Issue>
+                        <PubDate>
+                            <Year>2022</Year>
+                            <Month>Apr</Month>
+                            <Day>20</Day>
+                        </PubDate>
+                    </JournalIssue>
+                    <Title>Clocks &amp; sleep</Title>
+                    <ISOAbbreviation>Clocks Sleep</ISOAbbreviation>
+                </Journal>
+                <ArticleTitle>Combining Wake-Up-Back-to-Bed with Cognitive Induction Techniques: Does Earlier Sleep Interruption Reduce Lucid Dream Induction Rate?</ArticleTitle>
+                <Pagination>
+                    <MedlinePgn>230-239</MedlinePgn>
+                </Pagination>
+                <ELocationID EIdType="doi" ValidYN="Y">10.3390/clockssleep4020021</ELocationID>
+                <Abstract>
+                    <AbstractText>Lucid dreaming offers the chance to investigate dreams from within a dream and by real-time dialogue between experimenters and dreamers during REM sleep. This state of consciousness opens a new experimental venue for dream research. However, laboratory study in this field is limited due to the rarity of lucid dreamers. In a previous study, we were able to induce in 50% of the participants a lucid dream in a single sleep laboratory night by combining a wake-up-back-to-bed (WBTB) sleep routine and a mnemonic method (Mnemonic Induction of Lucid Dreams, MILD). In three experiments, we tried to replicate our earlier findings while we adapted our procedure in shortening (Exp1-3: 4.5 vs. 6 h of uninterrupted sleep in the first half of the night), simplifying (Exp2: time-based wakening vs. REM wakening in the second half of the night), and applying another induction technique (Exp3: reality testing vs. MILD). In the three conditions, four out of 15 (26%), zero out of 20 (0%), and three out of 15 (20%) participants reported a lucid dream. Compared to the original study, the earlier sleep interruption seems to reduce the lucid dream induction rate. Furthermore, without REM awakenings in the morning, lucid dream induction failed, whereas reality testing showed a lower success rate compared to MILD. Further systematic sleep laboratory studies are needed to develop reliable techniques for lucid dream research.</AbstractText>
+                </Abstract>
+                <AuthorList CompleteYN="Y">
+                    <Author ValidYN="Y">
+                        <LastName>Erlacher</LastName>
+                        <ForeName>Daniel</ForeName>
+                        <Initials>D</Initials>
+                        <Identifier Source="ORCID">0000-0001-8981-2686</Identifier>
+                        <AffiliationInfo>
+                            <Affiliation>Institute of Sport Science, University of Bern, 3012 Bern, Switzerland.</Affiliation>
+                        </AffiliationInfo>
+                    </Author>
+                    <Author ValidYN="Y">
+                        <LastName>Furrer</LastName>
+                        <ForeName>Vitus</ForeName>
+                        <Initials>V</Initials>
+                        <AffiliationInfo>
+                            <Affiliation>PHBern, University of Teacher Education, 3012 Bern, Switzerland.</Affiliation>
+                        </AffiliationInfo>
+                    </Author>
+                    <Author ValidYN="Y">
+                        <LastName>Ineichen</LastName>
+                        <ForeName>Matthias</ForeName>
+                        <Initials>M</Initials>
+                        <AffiliationInfo>
+                            <Affiliation>Institute of Sport Science, University of Bern, 3012 Bern, Switzerland.</Affiliation>
+                        </AffiliationInfo>
+                    </Author>
+                    <Author ValidYN="Y">
+                        <LastName>Braillard</LastName>
+                        <ForeName>John</ForeName>
+                        <Initials>J</Initials>
+                        <AffiliationInfo>
+                            <Affiliation>Institute of Sport Science, University of Bern, 3012 Bern, Switzerland.</Affiliation>
+                        </AffiliationInfo>
+                    </Author>
+                    <Author ValidYN="Y">
+                        <LastName>Schmid</LastName>
+                        <ForeName>Daniel</ForeName>
+                        <Initials>D</Initials>
+                        <AffiliationInfo>
+                            <Affiliation>Institute of Psychology, University of Bern, 3012 Bern, Switzerland.</Affiliation>
+                        </AffiliationInfo>
+                    </Author>
+                </AuthorList>
+                <Language>eng</Language>
+                <PublicationTypeList>
+                    <PublicationType UI="D016428">Journal Article</PublicationType>
+                </PublicationTypeList>
+                <ArticleDate DateType="Electronic">
+                    <Year>2022</Year>
+                    <Month>04</Month>
+                    <Day>20</Day>
+                </ArticleDate>
+            </Article>
+            <MedlineJournalInfo>
+                <Country>Switzerland</Country>
+                <MedlineTA>Clocks Sleep</MedlineTA>
+                <NlmUniqueID>101736579</NlmUniqueID>
+                <ISSNLinking>2624-5175</ISSNLinking>
+            </MedlineJournalInfo>
+            <KeywordList Owner="NOTNLM">
+                <Keyword MajorTopicYN="N">MILD</Keyword>
+                <Keyword MajorTopicYN="N">lucid dream induction</Keyword>
+                <Keyword MajorTopicYN="N">morning sleep</Keyword>
+                <Keyword MajorTopicYN="N">reality testing</Keyword>
+                <Keyword MajorTopicYN="N">sleep laboratory</Keyword>
+                <Keyword MajorTopicYN="N">wake-up-back-to-bed</Keyword>
+            </KeywordList>
+        </MedlineCitation>
+        <PubmedData>
+            <History>
+                <PubMedPubDate PubStatus="received">
+                    <Year>2022</Year>
+                    <Month>02</Month>
+                    <Day>25</Day>
+                </PubMedPubDate>
+                <PubMedPubDate PubStatus="revised">
+                    <Year>2022</Year>
+                    <Month>04</Month>
+                    <Day>02</Day>
+                </PubMedPubDate>
+                <PubMedPubDate PubStatus="accepted">
+                    <Year>2022</Year>
+                    <Month>04</Month>
+                    <Day>09</Day>
+                </PubMedPubDate>
+                <PubMedPubDate PubStatus="entrez">
+                    <Year>2022</Year>
+                    <Month>6</Month>
+                    <Day>1</Day>
+                    <Hour>11</Hour>
+                    <Minute>17</Minute>
+                </PubMedPubDate>
+                <PubMedPubDate PubStatus="pubmed">
+                    <Year>2022</Year>
+                    <Month>6</Month>
+                    <Day>2</Day>
+                    <Hour>6</Hour>
+                    <Minute>0</Minute>
+                </PubMedPubDate>
+                <PubMedPubDate PubStatus="medline">
+                    <Year>2022</Year>
+                    <Month>6</Month>
+                    <Day>2</Day>
+                    <Hour>6</Hour>
+                    <Minute>1</Minute>
+                </PubMedPubDate>
+            </History>
+            <PublicationStatus>epublish</PublicationStatus>
+            <ArticleIdList>
+                <ArticleId IdType="pubmed">35645242</ArticleId>
+                <ArticleId IdType="pii">clockssleep4020021</ArticleId>
+                <ArticleId IdType="doi">10.3390/clockssleep4020021</ArticleId>
+                <ArticleId IdType="pmc">PMC9149976</ArticleId>
+            </ArticleIdList>
+            <ReferenceList>
+                <Reference>
+                    <Citation>Conscious Cogn. 2020 Aug;83:102960</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">32526491</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Am J Psychol. 2014 Summer;127(2):191-204</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">24934010</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Neurosci Biobehav Rev. 2019 May;100:305-323</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">30880167</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Percept Mot Skills. 2004 Jun;98(3 Pt 2):1422-6</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">15291233</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Front Psychol. 2020 Jun 26;11:1383</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">32670163</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Conscious Cogn. 2016 Jul;43:197-215</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">27337287</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Conscious Cogn. 2020 Aug;83:102975</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">32570154</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Conscious Cogn. 2012 Sep;21(3):1456-75</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">22841958</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Percept Mot Skills. 2011 Feb;112(1):104-8</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">21466083</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Curr Biol. 2021 Apr 12;31(7):1417-1427.e6</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">33607035</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Percept Mot Skills. 1981 Jun;52(3):727-32</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">24171230</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Nat Neurosci. 2017 Jun;20(6):872-878</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">28394322</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+            </ReferenceList>
+        </PubmedData>
+    </PubmedArticle>
+    <PubmedArticle>
+        <MedlineCitation Status="PubMed-not-MEDLINE" Owner="NLM">
+            <PMID Version="1">35558700</PMID>
+            <DateRevised>
+                <Year>2022</Year>
+                <Month>07</Month>
+                <Day>16</Day>
+            </DateRevised>
+            <Article PubModel="Electronic-eCollection">
+                <Journal>
+                    <ISSN IssnType="Print">1664-1078</ISSN>
+                    <JournalIssue CitedMedium="Print">
+                        <Volume>13</Volume>
+                        <PubDate>
+                            <Year>2022</Year>
+                        </PubDate>
+                    </JournalIssue>
+                    <Title>Frontiers in psychology</Title>
+                    <ISOAbbreviation>Front Psychol</ISOAbbreviation>
+                </Journal>
+                <ArticleTitle>Examining the Relation Between Practicing Meditation and Having Peak Experiences and Lucid Dreams. A Cross-Sectional Study.</ArticleTitle>
+                <Pagination>
+                    <MedlinePgn>858745</MedlinePgn>
+                </Pagination>
+                <ELocationID EIdType="doi" ValidYN="Y">10.3389/fpsyg.2022.858745</ELocationID>
+                <Abstract>
+                    <AbstractText>
+                        The aim of this study was to compare meditators and non-meditators in terms of their tendency to have peak experiences and their dream lucidity, while examining the associations between these outcomes and some related variables such as non-dual awareness, mindfulness facets and absorption. In this cross-sectional study, 237 participants from general Spanish population completed an online survey that included
+                        <i>ad hoc</i>
+                        questions related to the study aim, along with the Five Facet Mindfulness Questionnaire (FFMQ), the Non-dual Embodiment Thematic Inventory (NETI), the Tellegen Absorption Scale (TAS) and the Lucidity and Consciousness in Dreams Scale (LUCID). Of the total, 110 participants were identified as meditators and 127 as non-meditators. More than half of the sample (58.2%) reported having experienced at least one peak experience in their life; these showed no differences in the number, intensity, or self-inducing ability of these experiences between both groups but were significantly more common among meditators (71.8% vs. 46.8%;
+                        <i>p</i>
+                        &lt; 0.001), who also presented higher scores in most of the questionnaires, except for some LUCID subscales. Regression models demonstrated that being a meditator was a significant predictor of having had a peak experience, but not of LUCID scores. These results, which need to be interpreted considering the study limitations, support the potential of meditation to facilitate having peak experiences, while its impact on lucid dreams remains unclear.
+                    </AbstractText>
+                    <CopyrightInformation>Copyright © 2022 Garcia-Campayo, Hijar-Aguinaga, Barceló-Soler, Fernández-Martínez, Aristegui and Pérez-Aranda.</CopyrightInformation>
+                </Abstract>
+                <AuthorList CompleteYN="Y">
+                    <Author ValidYN="Y">
+                        <LastName>Garcia-Campayo</LastName>
+                        <ForeName>Javier</ForeName>
+                        <Initials>J</Initials>
+                        <AffiliationInfo>
+                            <Affiliation>Institute of Health Research of Aragon (IIS), Zaragoza, Spain.</Affiliation>
+                        </AffiliationInfo>
+                        <AffiliationInfo>
+                            <Affiliation>Department of Medicine, Psychiatry and Dermatology, Faculty of Medicine, University of Zaragoza, Zaragoza, Spain.</Affiliation>
+                        </AffiliationInfo>
+                    </Author>
+                    <Author ValidYN="Y">
+                        <LastName>Hijar-Aguinaga</LastName>
+                        <ForeName>Rinchen</ForeName>
+                        <Initials>R</Initials>
+                        <AffiliationInfo>
+                            <Affiliation>Department of Medicine, Psychiatry and Dermatology, Faculty of Medicine, University of Zaragoza, Zaragoza, Spain.</Affiliation>
+                        </AffiliationInfo>
+                    </Author>
+                    <Author ValidYN="Y">
+                        <LastName>Barceló-Soler</LastName>
+                        <ForeName>Alberto</ForeName>
+                        <Initials>A</Initials>
+                        <AffiliationInfo>
+                            <Affiliation>Institute of Health Research of Aragon (IIS), Zaragoza, Spain.</Affiliation>
+                        </AffiliationInfo>
+                        <AffiliationInfo>
+                            <Affiliation>Navarra Medical Research Institute (IdiSNA), Pamplona, Spain.</Affiliation>
+                        </AffiliationInfo>
+                    </Author>
+                    <Author ValidYN="Y">
+                        <LastName>Fernández-Martínez</LastName>
+                        <ForeName>Selene</ForeName>
+                        <Initials>S</Initials>
+                        <AffiliationInfo>
+                            <Affiliation>Institute of Health Research of Aragon (IIS), Zaragoza, Spain.</Affiliation>
+                        </AffiliationInfo>
+                    </Author>
+                    <Author ValidYN="Y">
+                        <LastName>Aristegui</LastName>
+                        <ForeName>Roberto</ForeName>
+                        <Initials>R</Initials>
+                        <AffiliationInfo>
+                            <Affiliation>Department of Psychiatry and Mental Health Oriente, Faculty of Medicine, University of Chile, Santiago, Chile.</Affiliation>
+                        </AffiliationInfo>
+                    </Author>
+                    <Author ValidYN="Y">
+                        <LastName>Pérez-Aranda</LastName>
+                        <ForeName>Adrián</ForeName>
+                        <Initials>A</Initials>
+                        <AffiliationInfo>
+                            <Affiliation>Institute of Health Research of Aragon (IIS), Zaragoza, Spain.</Affiliation>
+                        </AffiliationInfo>
+                        <AffiliationInfo>
+                            <Affiliation>Department of Basic, Developmental and Educational Psychology, Autonomous University of Barcelona, Cerdanyola del Vallès, Spain.</Affiliation>
+                        </AffiliationInfo>
+                    </Author>
+                </AuthorList>
+                <Language>eng</Language>
+                <PublicationTypeList>
+                    <PublicationType UI="D016428">Journal Article</PublicationType>
+                </PublicationTypeList>
+                <ArticleDate DateType="Electronic">
+                    <Year>2022</Year>
+                    <Month>04</Month>
+                    <Day>26</Day>
+                </ArticleDate>
+            </Article>
+            <MedlineJournalInfo>
+                <Country>Switzerland</Country>
+                <MedlineTA>Front Psychol</MedlineTA>
+                <NlmUniqueID>101550902</NlmUniqueID>
+                <ISSNLinking>1664-1078</ISSNLinking>
+            </MedlineJournalInfo>
+            <KeywordList Owner="NOTNLM">
+                <Keyword MajorTopicYN="N">absorption</Keyword>
+                <Keyword MajorTopicYN="N">lucid dreams</Keyword>
+                <Keyword MajorTopicYN="N">mindfulness</Keyword>
+                <Keyword MajorTopicYN="N">non-dual experience</Keyword>
+                <Keyword MajorTopicYN="N">peak experience</Keyword>
+                <Keyword MajorTopicYN="N">self-transcendence</Keyword>
+            </KeywordList>
+            <CoiStatement>The authors declare that the research was conducted in the absence of any commercial or financial relationships that could be construed as a potential conflict of interest.</CoiStatement>
+        </MedlineCitation>
+        <PubmedData>
+            <History>
+                <PubMedPubDate PubStatus="received">
+                    <Year>2022</Year>
+                    <Month>01</Month>
+                    <Day>20</Day>
+                </PubMedPubDate>
+                <PubMedPubDate PubStatus="accepted">
+                    <Year>2022</Year>
+                    <Month>04</Month>
+                    <Day>05</Day>
+                </PubMedPubDate>
+                <PubMedPubDate PubStatus="entrez">
+                    <Year>2022</Year>
+                    <Month>5</Month>
+                    <Day>13</Day>
+                    <Hour>18</Hour>
+                    <Minute>19</Minute>
+                </PubMedPubDate>
+                <PubMedPubDate PubStatus="pubmed">
+                    <Year>2022</Year>
+                    <Month>5</Month>
+                    <Day>14</Day>
+                    <Hour>6</Hour>
+                    <Minute>0</Minute>
+                </PubMedPubDate>
+                <PubMedPubDate PubStatus="medline">
+                    <Year>2022</Year>
+                    <Month>5</Month>
+                    <Day>14</Day>
+                    <Hour>6</Hour>
+                    <Minute>1</Minute>
+                </PubMedPubDate>
+            </History>
+            <PublicationStatus>epublish</PublicationStatus>
+            <ArticleIdList>
+                <ArticleId IdType="pubmed">35558700</ArticleId>
+                <ArticleId IdType="doi">10.3389/fpsyg.2022.858745</ArticleId>
+                <ArticleId IdType="pmc">PMC9087568</ArticleId>
+            </ArticleIdList>
+            <ReferenceList>
+                <Reference>
+                    <Citation>Ann Behav Med. 2020 Jan 1;54(1):67-73</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">31167026</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Explore (NY). 2005 Mar;1(2):89-101</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">16781509</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Assessment. 2011 Sep;18(3):308-20</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">21586480</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Conscious Cogn. 2017 Mar;49:215-226</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">28219788</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Evid Based Complement Alternat Med. 2012;2012:234713</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">22216054</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>World J Psychiatry. 2021 Apr 19;11(4):87-93</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">33889534</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Evid Based Complement Alternat Med. 2012;2012:350674</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">22611427</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Front Neurosci. 2020 Jan 24;13:1423</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">32038133</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Brain Sci. 2021 Aug 18;11(8):</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">34439705</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>J Altern Complement Med. 1999 Dec;5(6):529-41</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">10630347</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Alzheimers Res Ther. 2018 Jun 22;10(1):57</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">29933746</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Cogn Neuropsychiatry. 2013;18(5):422-36</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">23082781</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Conscious Cogn. 2012 Sep;21(3):1456-75</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">22841958</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>J Pers Oriented Res. 2019 Sep 12;5(1):27-36</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">33569139</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>J Abnorm Psychol. 1974 Jun;83(3):268-77</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">4844914</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Biol Psychol. 2013 Feb;92(2):275-81</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">23046904</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Psychol Assess. 2018 Dec;30(12):1625-1639</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">30058824</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>J Altern Complement Med. 2018 Apr;24(4):343-351</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">29216441</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Curr Opin Psychol. 2019 Aug;28:172-178</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">30739005</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Front Psychol. 2021 Oct 21;12:742438</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">34744915</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Clin Psychol Rev. 2018 Feb;59:52-60</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">29126747</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Chin Med J (Engl). 2018 Apr 05;131(7):829-838</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">29578127</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Int J Clin Exp Hypn. 1993 Apr;41(2):112-23</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">8468103</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Front Hum Neurosci. 2018 Jun 11;12:222</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">29942255</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Biol Psychol. 2009 Sep;82(1):1-11</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">19393712</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Int J Clin Exp Hypn. 1989 Jul;37(3):249-63</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">2753575</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>PLoS One. 2012;7(2):e30800</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">22363492</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>PLoS One. 2019 Apr 2;14(4):e0214503</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">30939151</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Conscious Cogn. 2016 Jul;43:197-215</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">27337287</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Psychol Conscious (Wash D C). 2019 Mar;6(1):40-54</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">31058200</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Cortex. 2009 Feb;45(2):236-42</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">18621365</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Assessment. 2008 Sep;15(3):329-42</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">18310597</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>Conscious Cogn. 2013 Mar;22(1):8-21</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">23220345</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+                <Reference>
+                    <Citation>J Clin Epidemiol. 2014 Aug;67(8):850-7</Citation>
+                    <ArticleIdList>
+                        <ArticleId IdType="pubmed">24831050</ArticleId>
+                    </ArticleIdList>
+                </Reference>
+            </ReferenceList>
+        </PubmedData>
+    </PubmedArticle>
+</PubmedArticleSet>
