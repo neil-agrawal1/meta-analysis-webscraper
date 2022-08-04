@@ -20,6 +20,6 @@ handle = Entrez.efetch(db="pubmed", id=id_list, retmode="xml") #rettype="abstrac
 records = handle.read().decode('utf-8')
 # uprint(records)
 
-with open ("papers.xml", "w", encoding='utf-8') as xml_file: 
+with open ("pubmed/papers.xml", "w", encoding='utf-8') as xml_file: 
     xml_file.write(records)
 
