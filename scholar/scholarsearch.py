@@ -1,6 +1,6 @@
 from scholarly import scholarly, ProxyGenerator
 
-API_KEY = "f20fd669a86729dfed87c341d6480197"
+API_KEY = "44b8adae25f0c547d268f699c158d170"
 pg = ProxyGenerator()
 success = pg.ScraperAPI(API_KEY)
 print(success)

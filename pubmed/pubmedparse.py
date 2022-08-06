@@ -27,7 +27,7 @@ with open ("pubmed/pubmeddois.csv", "w", encoding="UTF-8", newline='') as file:
         doi = paper.find('PubmedData/ArticleIdList/.//ArticleId[@IdType="doi"]')
         if doi is None:
             doi = "No DOI"
-            print("No DOI")
+            thewriter.writerow([doi])
         else: 
             doi = doi.text
             thewriter.writerow(["http://doi.org/" + doi])
