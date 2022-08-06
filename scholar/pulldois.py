@@ -1,9 +1,27 @@
 from time import sleep
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
-import csv 
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
+from selenium_stealth import stealth
+import csv
 
-driver = webdriver.Chrome(executable_path = r"C:\\Users\\Home\\seleniumdrivers\\chromedriver.exe")
+options = Options()
+options.add_argument("start-maximized")
+options.add_experimental_option("excludeSwitches", ["enable-automation"])
+options.add_experimental_option('useAutomationExtension', False)
+s = Service('C:\\Users\\Home\\seleniumdrivers\\chromedriver.exe')
+
+driver = webdriver.Chrome(service = s, options=options)
+
+stealth(driver,
+      languages=["en-US", "en"],
+      vendor="Google Inc.",
+      platform="Win32",
+      webgl_vendor="Intel Inc.",
+      renderer="Intel Iris OpenGL Engine",
+      fix_hairline=True,
+  )
 
 urls = []
 with open ("scholar/scholar.csv", "r", encoding="utf-8-sig") as f: 
@@ -16,21 +34,25 @@ with open ("scholar/scholar.csv", "r", encoding="utf-8-sig") as f:
             urls.append(row[5])
 
     del urls[0]
-
-
-testurls = ["https://www.frontiersin.org/articles/10.3389/fpsyg.2020.01383/full","https://psycnet.apa.org/journals/drm/30/4/287/", "https://www.sciencedirect.com/science/article/pii/S0149763418303361", "https://www.frontiersin.org/articles/10.3389/fpsyg.2020.01383/full", "https://psycnet.apa.org/record/2020-24631-001", "https://www.frontiersin.org/articles/10.3389/fpsyg.2020.01383/full" ]
-
-for url in testurls: 
-    driver.get(url)
-    driver.implicitly_wait(3)
     
-    try: 
-        doi = driver.find_element("xpath", '//a[contains(text(), "doi")]')
-        print(doi.text)
-    except NoSuchElementException: 
-        print("No DOI")
-        continue         
+# testurls = ["https://www.frontiersin.org/articles/10.3389/fpsyg.2020.01383/full","https://psycnet.apa.org/journals/drm/30/4/287/", "https://www.sciencedirect.com/science/article/pii/S0149763418303361", "https://www.frontiersin.org/articles/10.3389/fpsyg.2020.01383/full", "https://psycnet.apa.org/record/2020-24631-001", "https://www.frontiersin.org/articles/10.3389/fpsyg.2020.01383/full" ]
+with open ("scholar/scholardois.csv", "w", encoding="utf-8", newline="") as file: 
+    thewriter = csv.writer(file)
+    header = ["DOI"]
+    thewriter.writerow(header)
+    counter = 0
 
-    sleep(2)
+    for url in urls: 
+        driver.get(url)
+        driver.implicitly_wait(1)
+        
+        try: 
+            doi = driver.find_element("xpath", '//a[contains(text(), "doi")]')
+            thewriter.writerow([doi.text])
+            print(doi.text)
+        except NoSuchElementException: 
+            counter = counter + 1
+            continue         
 
-driver.quit()
+print(counter)
+
