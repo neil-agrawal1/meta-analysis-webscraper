@@ -5,6 +5,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from selenium_stealth import stealth
 import csv
+import sys
 
 options = Options()
 options.add_argument("start-maximized")
@@ -22,6 +23,12 @@ stealth(driver,
       renderer="Intel Iris OpenGL Engine",
       fix_hairline=True,
   )
+testurls2 = ["https://psycnet.apa.org/journals/drm/30/4/287/", "https://psycnet.apa.org/journals/drm/30/4/287/"]
+driver.get("https://psycnet.apa.org/journals/drm/30/4/287/")
+driver.implicitly_wait(1)
+doi = driver.find_element("xpath", '//a[contains(text(), "doi")]')
+print(doi.text)
+sys.exit()
 
 urls = []
 with open ("scholar/scholar.csv", "r", encoding="utf-8-sig") as f: 
