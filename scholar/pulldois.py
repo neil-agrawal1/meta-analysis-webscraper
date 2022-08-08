@@ -1,4 +1,3 @@
-from time import sleep
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.chrome.options import Options
@@ -7,8 +6,7 @@ from selenium_stealth import stealth
 import csv
 import os, sys
 
-sys.path.insert(1, r'C:\\Users\\Home\\python-projects\\meta-analysis-webscraper\\crossref')
-from crossref.crossrefparse import apapsychdois
+# sys.path.insert(1, r'C:\\Users\\Home\\python-projects\\meta-analysis-webscraper\\crossref')
 
 options = Options()
 options.add_argument("start-maximized")
@@ -41,29 +39,29 @@ with open ("scholar/scholar.csv", "r", encoding="utf-8-sig") as f:
         else: 
             urls.append(row[5])
 
-print(apapsychurls)
-print(urls)
 del urls[0]
     
-#Handle Apa.org
 for link in apapsychurls: 
         f = open("test.py", "w+")
         f.writelines([
         "from selenium import webdriver \n",
+        "import csv \n"
         "driver = webdriver.Chrome(executable_path=r'C:\\Users\\Home\\seleniumdrivers\\chromedriver.exe') \n",
         f"driver.get('{link}') \n"
         "driver.implicitly_wait(1) \n",
         "doi = driver.find_element(\"xpath\", '//a[contains(text(), \"doi\")]') \n" ,
         "print(doi.text) \n",
-        "with open (\"apadois.txt\", \"a\", encoding=\"utf-8\") as f: \n" ,
-            "\tf.write(doi.text + \"\\n\")"])
+        "with open (\"scholar/scholardois.csv\", \"a\", newline=\"\", encoding=\"utf-8\") as f: \n" ,
+            "\tthewriter = csv.writer(f) \n",
+            "\tthewriter.writerow([\"DOI\"]) \n",
+            "\tthewriter.writerow([doi.text])"
+            ])
         
         f.close()
         exec(open("test.py").read())
         os.remove("test.py")
-
-
 # testurls = ["https://www.frontiersin.org/articles/10.3389/fpsyg.2020.01383/full","https://psycnet.apa.org/journals/drm/30/4/287/", "https://www.sciencedirect.com/science/article/pii/S0149763418303361", "https://www.frontiersin.org/articles/10.3389/fpsyg.2020.01383/full", "https://psycnet.apa.org/record/2020-24631-001", "https://www.frontiersin.org/articles/10.3389/fpsyg.2020.01383/full" ]
+
 #return DOIs from rest of scholar links
 with open ("scholar/scholardois.csv", "w", encoding="utf-8", newline="") as file: 
     thewriter = csv.writer(file)
@@ -73,7 +71,7 @@ with open ("scholar/scholardois.csv", "w", encoding="utf-8", newline="") as file
 
     for url in urls: 
         driver.get(url)
-        driver.implicitly_wait(1)
+        # driver.implicitly_wait(0.5)
         
         try: 
             doi = driver.find_element("xpath", '//a[contains(text(), "doi")]')
@@ -85,3 +83,9 @@ with open ("scholar/scholardois.csv", "w", encoding="utf-8", newline="") as file
 
 print(counter)
 
+#Handle Apa.org
+
+
+#code to write only apa dois to own text file 
+# "with open (\"apadois.txt\", \"a\", encoding=\"utf-8\") as f: \n" ,
+#             "\tf.write(doi.text + \"\\n\")"])
