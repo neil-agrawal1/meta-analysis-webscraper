@@ -7,7 +7,7 @@ with open('scholar/scholar.csv', 'w', encoding="utf8", newline='') as f:
     thewriter.writerow(header)
 
     scholarurls = []
-    for i in range(100): 
+    for i in range(30): 
         publication = next(search_query)
         fullpublication = publication['bib']
         if ("pub_url" in publication):

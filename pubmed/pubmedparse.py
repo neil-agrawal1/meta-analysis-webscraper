@@ -3,6 +3,7 @@ import xml.etree.ElementTree as ET
 import sys 
 from csv import writer
 
+
 def uprint(*objects, sep=' ', end='\n', file=sys.stdout):
     enc = file.encoding
     if enc == 'UTF-8':
@@ -31,13 +32,14 @@ with open ("pubmed/pubmeddois.csv", "w", encoding="UTF-8", newline='') as file:
         else: 
             doi = doi.text
             thewriter.writerow(["http://doi.org/" + doi])
-        #Abstract
-        # abstractWrapper = paper.find('Abstract')
-        # if abstractWrapper is None: 
-        #     abstract = "No Abstract" 
-        # else: 
-        #     abstract = abstractWrapper.find('AbstractText').text
-
-        # if abstract is None: 
-        #     abstract = "No Abstract"  
         
+        def findAbstract():     
+            abstractWrapper = paper.find('MedlineCitation/Article/Abstract')
+            if abstractWrapper is None: 
+                abstract = "No Abstract" 
+                print(doi)
+            else:
+                abstract = abstractWrapper.find('AbstractText').text
+
+            uprint(abstract)
+        findAbstract()
