@@ -30,6 +30,7 @@ for doi in df['DOI']:
         if 'abstract' in results['message']: 
             abstract = results['message']['abstract']
             uprint(cleanhtml(abstract))
+            uprint(doi)
     except HTTPError:
         findAbstract()
     
