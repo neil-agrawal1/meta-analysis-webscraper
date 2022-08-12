@@ -16,3 +16,4 @@ with open('scholar/scholar.csv', 'w', encoding="utf8", newline='') as f:
         else: 
             fullpublication['Link'] = "None"
         thewriter.writerow(list(fullpublication.values()))
+
