@@ -37,7 +37,7 @@ for paper in root.findall("./PubmedArticle"):
     # elif "10.1037" in doi.text:
     #     apapsychdois.append(doi.text)
     elif "10.1037" in doi.text:
-        apadois.append(doi.text)
+        apadois.append("http://doi.org/" + doi.text)
 
     else:
         dois.append(doi.text)
@@ -46,16 +46,13 @@ for paper in root.findall("./PubmedArticle"):
         abstractWrapper = paper.find("MedlineCitation/Article/Abstract")
         if abstractWrapper is None:
             abstract = "No Abstract"
-            print(doi)
         else:
             abstract = abstractWrapper.find("AbstractText").text
 
-        uprint(abstract)
+        return abstract
 
 
-df = pd.DataFrame(list(zip(dois, titles)), columns=["DOI", "title"])
+df = pd.DataFrame(list(zip(dois, titles)), columns=["DOI", "Title"])
 apadf = pd.DataFrame(apadois, columns=["DOI"])
 df.to_csv("pubmed/pubmeddata.csv", index=None)
 apadf.to_csv("apadois.csv", mode="a", index=None, header=None)
-
-print("hello")

@@ -21,13 +21,14 @@ dois = []
 apadois = []
 for i in information:
     if 'title' in i:
-        titles.append(i['title'])
+        title = ''.join(i['title'])
+        titles.append(title)
     if "10.1037" in i["DOI"]:
-        apadois.append(i["DOI"])
+        apadois.append("https://doi.org/" + i["DOI"])
     else: 
         dois.append(i["DOI"])
 
 apadf = pd.DataFrame(apadois, columns=["DOI"])
-apadf.to_csv("apadois.csv", mode="a+", index=None)
-df = pd.DataFrame(list(zip(dois,titles)), columns=["DOI", "title"])
+apadf.to_csv("apadois.csv", mode="w", index=None)
+df = pd.DataFrame(list(zip(dois,titles)), columns=["DOI", "Title"])
 df.to_csv("crossref/crossrefdata.csv", index=None)

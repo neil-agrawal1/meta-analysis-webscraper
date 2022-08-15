@@ -5,7 +5,11 @@ from habanero import Crossref
 from pubmed.pubmedsearch import uprint 
 from pubmed.pubmedparse import findAbstract
 from requests.exceptions import HTTPError 
+from selenium.common.exceptions import NoSuchElementException
 import re
+import requests 
+from bs4 import BeautifulSoup
+
 # result = driver.find_element("xpath", '//div/p')
 ChromeOptions = webdriver.ChromeOptions()
 ChromeOptions.add_argument('--disable-browser-side-navigation')
@@ -20,27 +24,53 @@ def cleanhtml(raw_html):
     cleantext = re.sub(CLEANR, '', raw_html)
     return cleantext 
 
-df = pd.read_csv("dois.csv")
+df = pd.read_csv("prelimdata.csv")
+abstracts = []
+def fetchAbstract(): 
+    for doi in df['DOI']:
+        try: 
+            results = cr.works(ids=doi)
+            title = results['message']['title']
+            uprint(title)
+            if 'abstract' in results['message']: 
+                abstract = results['message']['abstract']
+                uprint(cleanhtml(abstract))
+                abstracts.append(abstract)
+            else:
+                raise HTTPError
+        except HTTPError:
+            abstract = findAbstract()
+            if abstract == "No Abstract": 
+                #sciencedirect
+                if "10.1016" in doi: 
+                    try: 
+                        driver = webdriver.Chrome(executable_path=r'C:\\Users\\neila\\seleniumdrivers\\chromedriver.exe')
+                        driver.get("https://doi.org/" + doi)
+                        abstractcontainer = driver.find_element("xpath", '//div[@class="abstract author"]')
+                        abstract = cleanhtml(abstractcontainer.get_attribute("innerHTML"))
+                        abstracts.append(abstract)
+                        print("Found scidirect abstract")
+                        print(doi)
+                    except NoSuchElementException:
+                        abstract = "No Abstract"
+                        abstracts.append(abstract)
+                        print("Can't find abstract in SciDirect")
+                        print(doi)
+                else: 
+                    abstract = "No abstract"
+                    print("Not a Scidirect Abstract, look elsewhere")
+                    print(doi)
+            else: 
+                abstracts.append(abstract) 
+                print("added pubmed abstract")      
     
-for doi in df['DOI']:
-    try: 
-        results = cr.works(ids=doi)
-        title = results['message']['title']
-        uprint(title)
-        if 'abstract' in results['message']: 
-            abstract = results['message']['abstract']
-            uprint(cleanhtml(abstract))
-            uprint(doi)
-    except HTTPError:
-        findAbstract()
-    
-    if "10.1037" in doi: 
-        driver = webdriver.Chrome(executable_path=r'C:\\Users\\Home\\seleniumdrivers\\chromedriver.exe', chrome_options=ChromeOptions)
-        driver.get(doi)
-        abstract = driver.find_element(By.CLASS_NAME, "abstract")
-        print(abstract.text)
-        continue 
-    
-    
+    print(abstracts)
+
+fetchAbstract()     
+# uprint(abstracts)
 #     # //tag[contains(text(), ’text’)]
 
+# page = requests.get("https://www.sciencedirect.com/science/article/abs/pii/S0924933815313729")
+# soup = BeautifulSoup(page.content, 'html.parser')
+# abstract = soup.find('div', {"id":"preview-section-abstract"})
+# uprint(soup.prettify())
