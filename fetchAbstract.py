@@ -1,5 +1,4 @@
 from selenium import webdriver
-from selenium.webdriver.common.by import By
 import pandas as pd
 from habanero import Crossref
 from pubmed.pubmedsearch import uprint 
@@ -7,39 +6,33 @@ from pubmed.pubmedparse import findAbstract
 from requests.exceptions import HTTPError 
 from selenium.common.exceptions import NoSuchElementException
 import re
-import requests 
-from bs4 import BeautifulSoup
 
-# result = driver.find_element("xpath", '//div/p')
 ChromeOptions = webdriver.ChromeOptions()
 ChromeOptions.add_argument('--disable-browser-side-navigation')
 
 cr = Crossref()
-# uprint(cr.works(ids="http://doi.org/10.26355/eurrev_202104_25559"))
-# result = cr.works(ids="https://doi.org/10.1093/sleep/zsab294")
-# abstract = result['message']['abstract']
 
 CLEANR = re.compile('<.*?>') 
 def cleanhtml(raw_html):
     cleantext = re.sub(CLEANR, '', raw_html)
     return cleantext 
 
-df = pd.read_csv("prelimdata.csv")
+df1 = pd.read_csv("prelimdata.csv")
 abstracts = []
 def fetchAbstract(): 
-    for doi in df['DOI']:
+    for doi in df1['DOI']:
         try: 
             results = cr.works(ids=doi)
-            title = results['message']['title']
-            uprint(title)
             if 'abstract' in results['message']: 
-                abstract = results['message']['abstract']
-                uprint(cleanhtml(abstract))
+                abstract = cleanhtml(results['message']['abstract'])
+                print("Found in Crossref")
+                print(doi)
+                uprint(abstract)
                 abstracts.append(abstract)
             else:
                 raise HTTPError
         except HTTPError:
-            abstract = findAbstract()
+            abstract = findAbstract(doi)
             if abstract == "No Abstract": 
                 #sciencedirect
                 if "10.1016" in doi: 
@@ -48,26 +41,36 @@ def fetchAbstract():
                         driver.get("https://doi.org/" + doi)
                         abstractcontainer = driver.find_element("xpath", '//div[@class="abstract author"]')
                         abstract = cleanhtml(abstractcontainer.get_attribute("innerHTML"))
-                        abstracts.append(abstract)
-                        print("Found scidirect abstract")
+                        print("Scidirect paper")
                         print(doi)
+                        uprint(abstract)
+                        abstracts.append(abstract)
                     except NoSuchElementException:
-                        abstract = "No Abstract"
-                        abstracts.append(abstract)
-                        print("Can't find abstract in SciDirect")
+                        print("Weird Scidirect Article")
                         print(doi)
+                        uprint(abstract)
+                        abstracts.append(abstract)
+                elif "10.3389" in doi: 
+                    print("Frontier's Article")
+                    print(abstract)
+                    abstracts.append(abstract)
                 else: 
-                    abstract = "No abstract"
-                    print("Not a Scidirect Abstract, look elsewhere")
+                    print ("Not a frontiers article or scidirect")
                     print(doi)
+                    abstract = "Not scidirect/frontiers"
+                    abstracts.append(abstract)
             else: 
-                abstracts.append(abstract) 
-                print("added pubmed abstract")      
-    
-    print(abstracts)
+                print("Pubmed Abstract")
+                print(doi)
+                uprint(abstract)
+                abstracts.append(abstract)
 
 fetchAbstract()     
-# uprint(abstracts)
+
+df2 = pd.DataFrame(abstracts, columns=["Abstract"])
+print(df2)
+papers = pd.concat([df1, df2], axis = 1)
+papers.to_csv("papers.csv")
 #     # //tag[contains(text(), ’text’)]
 
 # page = requests.get("https://www.sciencedirect.com/science/article/abs/pii/S0924933815313729")

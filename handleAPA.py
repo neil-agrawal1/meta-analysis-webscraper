@@ -49,14 +49,14 @@ def fetchAPAdata():
             "from selenium.webdriver.common.by import By \n"
             "driver = webdriver.Chrome(executable_path=r'C:\\Users\\neila\\seleniumdrivers\\chromedriver.exe') \n",
             f"driver.get('{doi}') \n"
-            "driver.implicitly_wait(1) \n",
+            "driver.implicitly_wait(5) \n",
             "title = driver.find_element(By.CSS_SELECTOR, \"h2 a span\") \n", 
             "abstract = driver.find_element(By.CLASS_NAME, \"abstract\") \n",
             "uprint(title.text) \n"
             "uprint(abstract.text) \n",
             "with open (\"apadata.csv\", \"a+\", newline=\"\", encoding=\"utf-8\") as f: \n" ,
                 "\tthewriter = csv.writer(f) \n",
-                f"\tthewriter.writerow(['{doi}',title.text, abstract.text])"
+                f"\tthewriter.writerow(['{doi}', title.text, abstract.text])"
                 ])
             
             f.close()
@@ -67,6 +67,10 @@ fetchAPAdata()
 # from selenium.webdriver.common.by import By
 # from selenium import webdriver
 # driver = webdriver.Chrome(executable_path=r'C:\\Users\\neila\\seleniumdrivers\\chromedriver.exe')
-# driver.get("https://psycnet.apa.org/doiLanding?doi=10.1037%2Fa0020881")
+# driver.get("https://psycnet.apa.org/doiLanding?doi=10.1037%2Fh0094324")
+# driver.implicitly_wait(5)
 # title = driver.find_element(By.CSS_SELECTOR, "h2 a span") 
-# print(title.text)title = driver.find_element(By.CSS_SELECTOR, "h1 span") 
+# # abstract = driver.find_element(By.CLASS_NAME, "abstract") 
+# print(title.text)
+# print(abstract.text)
+# title = driver.find_element(By.CSS_SELECTOR, "h1 span") 

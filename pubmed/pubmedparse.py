@@ -25,33 +25,51 @@ titles = []
 dois = []
 apadois = []
 
-for paper in root.findall("./PubmedArticle"):
-    # Title
-    title = paper.find("MedlineCitation/Article/ArticleTitle").text
-    titles.append(title)
-    # doi
-    doi = paper.find('PubmedData/ArticleIdList/.//ArticleId[@IdType="doi"]')
-    if doi is None:
-        doi = "No DOI"
-        # thewriter.writerow([doi])
-    # elif "10.1037" in doi.text:
-    #     apapsychdois.append(doi.text)
-    elif "10.1037" in doi.text:
-        apadois.append("http://doi.org/" + doi.text)
+def fetchPubMedData(): 
+    for paper in root.findall("./PubmedArticle"):
+        # Title
+        title = paper.find("MedlineCitation/Article/ArticleTitle").text
+        titles.append(title)
+        # doi
+        doi = paper.find('PubmedData/ArticleIdList/.//ArticleId[@IdType="doi"]')
+        if doi is None:
+            doi = "No DOI"
+            # thewriter.writerow([doi])
+        # elif "10.1037" in doi.text:
+        #     apapsychdois.append(doi.text)
+        elif "10.1037" in doi.text:
+            apadois.append("http://doi.org/" + doi.text)
 
-    else:
-        dois.append(doi.text)
+        else:
+            dois.append(doi.text)
 
-    def findAbstract():
+def fetchAbstracts():
+    for paper in root.findall("./PubmedArticle"):
         abstractWrapper = paper.find("MedlineCitation/Article/Abstract")
         if abstractWrapper is None:
             abstract = "No Abstract"
         else:
             abstract = abstractWrapper.find("AbstractText").text
+        uprint(abstract)
 
-        return abstract
-
-
+def findAbstract(doi): 
+    for paper in root.findall("./PubmedArticle"):
+        tempdoi = paper.find('PubmedData/ArticleIdList/.//ArticleId[@IdType="doi"]')
+        if tempdoi is None: 
+            continue
+        else: 
+            tempdoi = tempdoi.text
+        if doi == tempdoi:  
+            abstractWrapper = paper.find("MedlineCitation/Article/Abstract")
+            if abstractWrapper is None:
+                abstract = "No Abstract"
+            else:
+                abstract = abstractWrapper.find("AbstractText").text
+                return abstract
+    return "No Abstract"
+fetchPubMedData()
+# doi = "10.1016/j.sleep.2021.10.030"
+# findAbstract(doi)
 df = pd.DataFrame(list(zip(dois, titles)), columns=["DOI", "Title"])
 apadf = pd.DataFrame(apadois, columns=["DOI"])
 df.to_csv("pubmed/pubmeddata.csv", index=None)
