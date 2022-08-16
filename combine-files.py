@@ -13,23 +13,23 @@ pd.set_option("display.max_rows", 400, "display.max_columns", 2)
 pubmed_df = pd.read_csv('pubmed/pubmeddata.csv', encoding='latin')
 crossref_df = pd.read_csv('crossref/crossrefdata.csv', encoding='latin')
 scholar_df = pd.read_csv('scholar/scholardata.csv', encoding='latin')
+apadois = pd.read_csv("apadois.csv", encoding="latin", index_col=False)
 
 pubmed_df = pubmed_df[~pubmed_df['DOI'].str.contains("No DOI")]
 scholar_df = scholar_df.dropna(axis=0)
-crossref_df[crossref_df.duplicated() == True]
 
-def combineData():
+
+def combinePrelimData():
     prelimdata = pd.concat([pubmed_df, crossref_df, scholar_df], axis=0, ignore_index=True, verify_integrity=True).drop_duplicates()
     prelimdata.to_csv('prelimdata.csv', index=None)
 
+apadois.drop_duplicates()
+apadois.to_csv("apadois.csv", index=None)
 
-def removeDuplicates(): 
-    apadois = pd.read_csv("apadois.csv", encoding="latin", index_col=False).drop_duplicates()
-    print(apadois)
-    apadois.to_csv("apadois.csv", index=None)
-
-removeDuplicates() 
-
+def combineAllData(): 
+    papers = pd.read_csv("papers.csv", encoding="latin")
+    apapapers = pd.read_csv("apadata.csv", encoding="latin")
+    allpapers = pd.concat([papers, apapapers], axis=0, ignore_index=True,verify_integrity=True)
 # apadata = pd.read_csv("apadata.csv",on_bad_lines='skip', encoding="latin")
 # apadata.reset_index(drop=True)
 # apadata.columns=["DOI", "Title", "Abstract"]

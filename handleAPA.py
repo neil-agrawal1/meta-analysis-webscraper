@@ -41,6 +41,7 @@ def fetchAPAdois():
 def fetchAPAdata(): 
     doisdf = pd.read_csv("apadois.csv")
     dois = doisdf["DOI"].tolist() 
+    print(dois)
     for doi in dois: 
             f = open("test.py", "w+")
             f.writelines([

@@ -49,11 +49,27 @@ def fetchAbstract():
                         print("Weird Scidirect Article")
                         print(doi)
                         uprint(abstract)
-                        abstracts.append(abstract)
+                        abstracts.append("Weird Scidirect " + abstract)
                 elif "10.3389" in doi: 
                     print("Frontier's Article")
                     print(abstract)
+                    abstracts.append("Frontier's " + abstract)
+                #IJODR
+                elif "10.1158" in doi:
+                    driver = webdriver.Chrome(executable_path=r'C:\\Users\\neila\\seleniumdrivers\\chromedriver.exe')
+                    driver.get(doi)
+                    abstractcontainer = driver.find_element("xpath", '//div[@class="item abstract"]/p')
+                    abstract = cleanhtml(abstractcontainer.get_attribute("innerHTML"))
+                    print(abstract)
                     abstracts.append(abstract)
+                #SpringerLink
+                elif "10.1007" in doi:
+                    driver = webdriver.Chrome(executable_path=r'C:\\Users\\neila\\seleniumdrivers\\chromedriver.exe')
+                    driver.get(doi)
+                    abstractcontainer = driver.find_element("xpath", '//div[@id="Abs1-content"]/p')
+                    abstract = cleanhtml(abstractcontainer.get_attribute("innerHTML"))
+                    print(abstract)
+                    abstracts.append(abstract)    
                 else: 
                     print ("Not a frontiers article or scidirect")
                     print(doi)
@@ -65,12 +81,12 @@ def fetchAbstract():
                 uprint(abstract)
                 abstracts.append(abstract)
 
-fetchAbstract()     
+# fetchAbstract()     
 
-df2 = pd.DataFrame(abstracts, columns=["Abstract"])
-print(df2)
-papers = pd.concat([df1, df2], axis = 1)
-papers.to_csv("papers.csv")
+# df2 = pd.DataFrame(abstracts, columns=["Abstract"])
+# print(df2)
+# papers = pd.concat([df1, df2], axis = 1)
+# papers.to_csv("papers.csv")
 #     # //tag[contains(text(), ’text’)]
 
 # page = requests.get("https://www.sciencedirect.com/science/article/abs/pii/S0924933815313729")
