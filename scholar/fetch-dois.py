@@ -26,7 +26,8 @@ def fetchDOIfromURL():
 
         try:
             doi = driver.find_element("xpath", '//a[contains(text(), "doi")]')
-            dois.append(doi.text)
+            doi = doi.text.removeprefix("https://doi.org/")
+            dois.append(doi)
             title = scholarinfo.loc[scholarinfo["Link"] == url]
             title.reset_index(drop=True, inplace=True)
             title = title["Title"][0]

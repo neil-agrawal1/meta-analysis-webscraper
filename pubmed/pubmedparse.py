@@ -38,8 +38,9 @@ def fetchPubMedData():
         # elif "10.1037" in doi.text:
         #     apapsychdois.append(doi.text)
         elif "10.1037" in doi.text:
-            apadois.append("http://doi.org/" + doi.text)
-
+            apadois.append(doi.text)
+        elif "10.1023" in doi.text: 
+            apadois.append(doi.text)
         else:
             dois.append(doi.text)
 
@@ -73,4 +74,4 @@ fetchPubMedData()
 df = pd.DataFrame(list(zip(dois, titles)), columns=["DOI", "Title"])
 apadf = pd.DataFrame(apadois, columns=["DOI"])
 df.to_csv("pubmed/pubmeddata.csv", index=None)
-apadf.to_csv("apadois.csv", mode="a", index=None, header=None)
+apadf.to_csv("apadois.csv", mode="a+", index=None, header=None)

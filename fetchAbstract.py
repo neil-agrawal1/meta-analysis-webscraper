@@ -19,6 +19,7 @@ def cleanhtml(raw_html):
 
 df1 = pd.read_csv("prelimdata.csv")
 abstracts = []
+print(df1["DOI"])
 def fetchAbstract(): 
     for doi in df1['DOI']:
         try: 
@@ -64,12 +65,16 @@ def fetchAbstract():
                     abstracts.append(abstract)
                 #SpringerLink
                 elif "10.1007" in doi:
-                    driver = webdriver.Chrome(executable_path=r'C:\\Users\\neila\\seleniumdrivers\\chromedriver.exe')
-                    driver.get(doi)
-                    abstractcontainer = driver.find_element("xpath", '//div[@id="Abs1-content"]/p')
-                    abstract = cleanhtml(abstractcontainer.get_attribute("innerHTML"))
-                    print(abstract)
-                    abstracts.append(abstract)    
+                    try: 
+                        driver = webdriver.Chrome(executable_path=r'C:\\Users\\neila\\seleniumdrivers\\chromedriver.exe')
+                        driver.get("http://doi.org/" + doi)
+                        abstractcontainer = driver.find_element("xpath", '//div[@id="Abs1-content"]/p')
+                        abstract = cleanhtml(abstractcontainer.get_attribute("innerHTML"))
+                        print(abstract)
+                        abstracts.append(abstract)    
+                    except NoSuchElementException: 
+                        abstracts.append("Broken Link")
+                        pass
                 else: 
                     print ("Not a frontiers article or scidirect")
                     print(doi)
@@ -81,13 +86,14 @@ def fetchAbstract():
                 uprint(abstract)
                 abstracts.append(abstract)
 
-# fetchAbstract()     
-
-# df2 = pd.DataFrame(abstracts, columns=["Abstract"])
-# print(df2)
-# papers = pd.concat([df1, df2], axis = 1)
-# papers.to_csv("papers.csv")
-#     # //tag[contains(text(), ’text’)]
+fetchAbstract()     
+df2 = pd.DataFrame(abstracts, columns=["Abstract"])
+papers = pd.concat([df1, df2], axis = 1)
+papers.to_csv("papers.csv")
+#if you want to remove all the no abstracts from the list, just filter through 
+#the papers datafram and remove any row that has "No abstract" in it
+#purepapers = papers[~papers["Abstract"].str.contains("No")]["Abstract"]
+#print(purepapers)
 
 # page = requests.get("https://www.sciencedirect.com/science/article/abs/pii/S0924933815313729")
 # soup = BeautifulSoup(page.content, 'html.parser')

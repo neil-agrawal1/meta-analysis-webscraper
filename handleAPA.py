@@ -19,45 +19,58 @@ def fetchAPAdois():
             f = open("test.py", "w+")
             f.writelines([
             "from selenium import webdriver \n",
+            "from selenium.webdriver.chrome.options import Options \n", 
+            "chrome_options = Options() \n",
+            "chrome_options.add_argument(\"--headless\") \n",
             "import csv \n",
             "from selenium.webdriver.common.by import By \n"
             "driver = webdriver.Chrome(executable_path=r'C:\\Users\\neila\\seleniumdrivers\\chromedriver.exe') \n",
             f"driver.get('{link}') \n"
-            "driver.implicitly_wait(1) \n",
+            "driver.implicitly_wait(5) \n",
             "doi = driver.find_element(\"xpath\", '//a[contains(text(), \"doi\")]') \n" ,
-            "uprint(doi.text) \n",
+            "doi = doi.text \n",
+            "doi = doi.removeprefix(\"https://doi.org/\") \n",
+            "uprint(doi) \n",
             "with open (\"apadois.csv\", \"a\", newline=\"\", encoding=\"utf-8\") as f: \n" ,
                 "\tthewriter = csv.writer(f) \n",
-                "\tthewriter.writerow([doi.text])"
+                "\tthewriter.writerow([doi])"
                 ])
             
             f.close()
             exec(open("test.py").read())
             os.remove("test.py")
-
-# fetchAPAdois()
+    
+    apadois = pd.read_csv("apadois.csv", encoding="latin", index_col=False)
+    apadois = apadois.drop_duplicates()
+    apadois.to_csv("apadois.csv", index=None)
+fetchAPAdois()
 
 #fetch title and abstract and store in a file with doi, title, and abstract
 def fetchAPAdata(): 
     doisdf = pd.read_csv("apadois.csv")
-    dois = doisdf["DOI"].tolist() 
+    dois = doisdf["DOI"].tolist()
     print(dois)
     for doi in dois: 
             f = open("test.py", "w+")
             f.writelines([
             "from selenium import webdriver \n",
+            "from selenium.webdriver.chrome.options import Options \n", 
+            "from selenium.common.exceptions import NoSuchElementException \n",
             "import csv \n",
             "from selenium.webdriver.common.by import By \n"
-            "driver = webdriver.Chrome(executable_path=r'C:\\Users\\neila\\seleniumdrivers\\chromedriver.exe') \n",
-            f"driver.get('{doi}') \n"
-            "driver.implicitly_wait(5) \n",
-            "title = driver.find_element(By.CSS_SELECTOR, \"h2 a span\") \n", 
-            "abstract = driver.find_element(By.CLASS_NAME, \"abstract\") \n",
-            "uprint(title.text) \n"
-            "uprint(abstract.text) \n",
-            "with open (\"apadata.csv\", \"a+\", newline=\"\", encoding=\"utf-8\") as f: \n" ,
-                "\tthewriter = csv.writer(f) \n",
-                f"\tthewriter.writerow(['{doi}', title.text, abstract.text])"
+            "try: \n"
+            "\tdriver = webdriver.Chrome(executable_path=r'C:\\Users\\neila\\seleniumdrivers\\chromedriver.exe') \n",
+            f"\tdriver.get('http://doi.org/{doi}') \n"
+            "\tdriver.implicitly_wait(5) \n",
+            "\ttitle = driver.find_element(By.CSS_SELECTOR, \"h2 a span\") \n", 
+            "\tabstract = driver.find_element(By.CLASS_NAME, \"abstract\") \n",
+            "\tuprint(title.text) \n"
+            "\tuprint(abstract.text) \n",
+            "\twith open (\"apadata.csv\", \"a+\", newline=\"\", encoding=\"utf-8\") as f: \n" ,
+                "\t\tthewriter = csv.writer(f) \n",
+                f"\t\tthewriter.writerow(['{doi}', title.text, abstract.text]) \n"
+            "except NoSuchElementException: \n"
+            "\t pass" 
                 ])
             
             f.close()
@@ -65,6 +78,9 @@ def fetchAPAdata():
             os.remove("test.py")
 
 fetchAPAdata()
+# apadata = pd.read_csv("apadata.csv")
+# apadata = apadata.drop_duplicates()
+# apadata.to_csv("apadata.csv", index=None)
 # from selenium.webdriver.common.by import By
 # from selenium import webdriver
 # driver = webdriver.Chrome(executable_path=r'C:\\Users\\neila\\seleniumdrivers\\chromedriver.exe')
@@ -75,3 +91,17 @@ fetchAPAdata()
 # print(title.text)
 # print(abstract.text)
 # title = driver.find_element(By.CSS_SELECTOR, "h1 span") 
+
+#headless options
+# "chrome_options = Options() \n",
+# "chrome_options.add_argument('--lang=en_US') \n", 
+# "chrome_options.add_argument(\"--no-sandbox\") \n"
+# "chrome_options.add_argument(\"--headless\") \n",
+# "chrome_options.add_argument('--disable-gpu') \n", 
+# "chrome_options.add_argument(\"--disable-extensions\") \n",             
+# "chrome_options.add_argument(\"--window-size=1920,1080\") \n",
+# "chrome_options.add_argument(\"start-maximized\") \n",
+# "chrome_options.add_experimental_option(\"excludeSwitches\", [\"enable-automation\"]) \n",
+# "chrome_options.add_experimental_option(\"useAutomationExtension\", False) \n",
+# "chrome_options.add_argument(\"--proxy-server='direct://'\"); \n",
+# "chrome_options.add_argument(\"--proxy-bypass-list=*\"); \n",
