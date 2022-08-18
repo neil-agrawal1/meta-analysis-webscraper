@@ -32,7 +32,7 @@ def fetchDOIfromURL():
             title.reset_index(drop=True, inplace=True)
             title = title["Title"][0]
             titles.append(title)
-            print(doi.text)
+            print(doi)
             print(title)
             driver.set_page_load_timeout(7)
         except NoSuchElementException:

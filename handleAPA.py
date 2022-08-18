@@ -43,13 +43,11 @@ def fetchAPAdois():
     apadois = pd.read_csv("apadois.csv", encoding="latin", index_col=False)
     apadois = apadois.drop_duplicates()
     apadois.to_csv("apadois.csv", index=None)
-fetchAPAdois()
 
 #fetch title and abstract and store in a file with doi, title, and abstract
 def fetchAPAdata(): 
     doisdf = pd.read_csv("apadois.csv")
     dois = doisdf["DOI"].tolist()
-    print(dois)
     for doi in dois: 
             f = open("test.py", "w+")
             f.writelines([
@@ -77,6 +75,7 @@ def fetchAPAdata():
             exec(open("test.py").read())
             os.remove("test.py")
 
+fetchAPAdois()
 fetchAPAdata()
 # apadata = pd.read_csv("apadata.csv")
 # apadata = apadata.drop_duplicates()

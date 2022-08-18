@@ -58,7 +58,7 @@ def fetchAbstract():
                 #IJODR
                 elif "10.1158" in doi:
                     driver = webdriver.Chrome(executable_path=r'C:\\Users\\neila\\seleniumdrivers\\chromedriver.exe')
-                    driver.get(doi)
+                    driver.get("https://doi.org/" + doi)
                     abstractcontainer = driver.find_element("xpath", '//div[@class="item abstract"]/p')
                     abstract = cleanhtml(abstractcontainer.get_attribute("innerHTML"))
                     print(abstract)

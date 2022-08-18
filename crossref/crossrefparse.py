@@ -30,6 +30,6 @@ for i in information:
         dois.append(i["DOI"])
 
 apadf = pd.DataFrame(apadois, columns=["DOI"])
-apadf.to_csv("apadois.csv", mode="a+", index=None)
+apadf.to_csv("apadois.csv", mode="w", index=None)
 df = pd.DataFrame(list(zip(dois,titles)), columns=["DOI", "Title"])
 df.to_csv("crossref/crossrefdata.csv", index=None)
