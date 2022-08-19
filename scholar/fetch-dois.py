@@ -10,7 +10,7 @@ options.add_experimental_option("excludeSwitches", ["enable-automation"])
 options.add_experimental_option("useAutomationExtension", False)
 options.add_argument("--headless")
 options.add_argument("--disable-gpu")
-s = Service("C:\\Users\\neila\\seleniumdrivers\\chromedriver.exe")
+s = Service("C:\\Users\\Home\\seleniumdrivers\\chromedriver.exe")
 
 df = pd.read_csv("scholar/scholar.csv")
 urls = df[~df["Link"].str.contains("apa.org" and "None")]["Link"].tolist()

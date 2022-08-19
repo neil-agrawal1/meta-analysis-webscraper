@@ -19,14 +19,14 @@ titles = []
 dois = []
 apadois = []
 for i in information:
-    if 'title' in i:
-        title = ''.join(i['title'])
-        titles.append(title)
     if "10.1037" in i["DOI"]:
         apadois.append(i["DOI"])
     elif "10.1023" in i["DOI"]:
         apadois.append(i["DOI"])
     else: 
+        if 'title' in i:
+            title = ''.join(i['title'])
+            titles.append(title)
         dois.append(i["DOI"])
 
 apadf = pd.DataFrame(apadois, columns=["DOI"])

@@ -24,7 +24,7 @@ def fetchAPAdois():
             "chrome_options.add_argument(\"--headless\") \n",
             "import csv \n",
             "from selenium.webdriver.common.by import By \n"
-            "driver = webdriver.Chrome(executable_path=r'C:\\Users\\neila\\seleniumdrivers\\chromedriver.exe') \n",
+            "driver = webdriver.Chrome(executable_path=r'C:\\Users\\Home\\seleniumdrivers\\chromedriver.exe') \n",
             f"driver.get('{link}') \n"
             "driver.implicitly_wait(5) \n",
             "doi = driver.find_element(\"xpath\", '//a[contains(text(), \"doi\")]') \n" ,
@@ -57,7 +57,7 @@ def fetchAPAdata():
             "import csv \n",
             "from selenium.webdriver.common.by import By \n"
             "try: \n"
-            "\tdriver = webdriver.Chrome(executable_path=r'C:\\Users\\neila\\seleniumdrivers\\chromedriver.exe') \n",
+            "\tdriver = webdriver.Chrome(executable_path=r'C:\\Users\\Home\\seleniumdrivers\\chromedriver.exe') \n",
             f"\tdriver.get('http://doi.org/{doi}') \n"
             "\tdriver.implicitly_wait(5) \n",
             "\ttitle = driver.find_element(By.CSS_SELECTOR, \"h2 a span\") \n", 
@@ -75,21 +75,11 @@ def fetchAPAdata():
             exec(open("test.py").read())
             os.remove("test.py")
 
+    apadata = pd.read_csv("apadata.csv", encoding="latin", index_col=False)
+    apadata = apadata.drop_duplicates()
+    apadata.to_csv("apadata.csv", index=None)
 fetchAPAdois()
 fetchAPAdata()
-# apadata = pd.read_csv("apadata.csv")
-# apadata = apadata.drop_duplicates()
-# apadata.to_csv("apadata.csv", index=None)
-# from selenium.webdriver.common.by import By
-# from selenium import webdriver
-# driver = webdriver.Chrome(executable_path=r'C:\\Users\\neila\\seleniumdrivers\\chromedriver.exe')
-# driver.get("https://psycnet.apa.org/doiLanding?doi=10.1037%2Fh0094324")
-# driver.implicitly_wait(5)
-# title = driver.find_element(By.CSS_SELECTOR, "h2 a span") 
-# # abstract = driver.find_element(By.CLASS_NAME, "abstract") 
-# print(title.text)
-# print(abstract.text)
-# title = driver.find_element(By.CSS_SELECTOR, "h1 span") 
 
 #headless options
 # "chrome_options = Options() \n",

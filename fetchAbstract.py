@@ -5,10 +5,17 @@ from pubmed.pubmedsearch import uprint
 from pubmed.pubmedparse import findAbstract
 from requests.exceptions import HTTPError 
 from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
 import re
 
-ChromeOptions = webdriver.ChromeOptions()
-ChromeOptions.add_argument('--disable-browser-side-navigation')
+options = Options()
+options.add_argument("start-maximized")
+options.add_experimental_option("excludeSwitches", ["enable-automation"])
+options.add_experimental_option("useAutomationExtension", False)
+options.add_argument("--headless")
+options.add_argument("--disable-gpu")
+s = Service("C:\\Users\\Home\\seleniumdrivers\\chromedriver.exe")
 
 cr = Crossref()
 
@@ -38,7 +45,7 @@ def fetchAbstract():
                 #sciencedirect
                 if "10.1016" in doi: 
                     try: 
-                        driver = webdriver.Chrome(executable_path=r'C:\\Users\\neila\\seleniumdrivers\\chromedriver.exe')
+                        driver = webdriver.Chrome(service=s, options=options)
                         driver.get("https://doi.org/" + doi)
                         abstractcontainer = driver.find_element("xpath", '//div[@class="abstract author"]')
                         abstract = cleanhtml(abstractcontainer.get_attribute("innerHTML"))
@@ -57,7 +64,7 @@ def fetchAbstract():
                     abstracts.append("Frontier's " + abstract)
                 #IJODR
                 elif "10.1158" in doi:
-                    driver = webdriver.Chrome(executable_path=r'C:\\Users\\neila\\seleniumdrivers\\chromedriver.exe')
+                    driver = webdriver.Chrome(service=s, options=options)
                     driver.get("https://doi.org/" + doi)
                     abstractcontainer = driver.find_element("xpath", '//div[@class="item abstract"]/p')
                     abstract = cleanhtml(abstractcontainer.get_attribute("innerHTML"))
@@ -66,7 +73,7 @@ def fetchAbstract():
                 #SpringerLink
                 elif "10.1007" in doi:
                     try: 
-                        driver = webdriver.Chrome(executable_path=r'C:\\Users\\neila\\seleniumdrivers\\chromedriver.exe')
+                        driver = webdriver.Chrome(service=s, options=options)
                         driver.get("http://doi.org/" + doi)
                         abstractcontainer = driver.find_element("xpath", '//div[@id="Abs1-content"]/p')
                         abstract = cleanhtml(abstractcontainer.get_attribute("innerHTML"))
@@ -88,8 +95,10 @@ def fetchAbstract():
 
 fetchAbstract()     
 df2 = pd.DataFrame(abstracts, columns=["Abstract"])
-papers = pd.concat([df1, df2], axis = 1)
-papers.to_csv("papers.csv")
+print(df2.columns)
+papers = pd.concat([df1, df2], axis = 1, ignore_index=True)
+print(papers.columns)
+papers.to_csv("papers.csv", index=None, header=["DOI", "Title", "Abstract"])
 #if you want to remove all the no abstracts from the list, just filter through 
 #the papers datafram and remove any row that has "No abstract" in it
 #purepapers = papers[~papers["Abstract"].str.contains("No")]["Abstract"]

@@ -27,8 +27,10 @@ def combineAllData():
     apapapers = pd.read_csv("apadata.csv", encoding="latin", header=None)
     apapapers.columns = ["DOI", "Title", "Abstract"]
     allpapers = pd.concat([papers, apapapers], axis=0, ignore_index=True)
+    allpapers = allpapers.drop_duplicates(subset=['Title'], keep="first")
+    allpapers = allpapers.drop_duplicates(subset=['DOI'], keep="first")
     allpapers.to_csv("allpapers.csv", index=None)
 
-combinePrelimData()
-# combineAllData()
+# combinePrelimData()
+combineAllData()
 
