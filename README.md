@@ -8,7 +8,6 @@ To scrape google scholar, you will need a [scraperAPI](https://www.scraperapi.co
 You don't need scraperAPI to scrape CrossRef or PubMed
 
 You will also need a VPN to run the program successfully. 
-(Check if program needs VPN to run pubmed and cross ref data) 
 
 ## Scripts
 
