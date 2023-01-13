@@ -59,9 +59,19 @@ def fetchAbstract():
                         uprint(abstract)
                         abstracts.append("Weird Scidirect " + abstract)
                 elif "10.3389" in doi: 
-                    print("Frontier's Article")
-                    print(abstract)
-                    abstracts.append("Frontier's " + abstract)
+                    try:
+                        print("Frontier's Article")
+                        driver = webdriver.Chrome(service=s, options=options)
+                        driver.get("https://doi.org/" + doi)
+                        abstractcontainer = driver.find_element("xpath", "//div[@class=\"JournalAbstract\"]/p")
+                        abstract = cleanhtml(abstractcontainer.get_attribute("innerHTML"))
+                        print(abstract)
+                        abstracts.append("Frontier's " + abstract)
+                    except NoSuchElementException:
+                        print("No Frontier Abstract")
+                        print(doi)
+                        uprint(abstract)
+                        abstracts.append("No Frontier Abstract "  + abstract)
                 #IJODR
                 elif "10.1158" in doi:
                     driver = webdriver.Chrome(service=s, options=options)

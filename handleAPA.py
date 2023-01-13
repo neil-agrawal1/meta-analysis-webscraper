@@ -14,20 +14,25 @@ apapsychurls=[]
 df = pd.read_csv("scholar/scholar.csv")
 apapsychurls = df[df['Link'].str.contains("apa.org")]['Link'].tolist()
 
+#"doi = driver.find_element(\"xpath\", '//a[contains(text(), \"doi\")]') \n" ,
+
+
 def fetchAPAdois(): 
     for link in apapsychurls: 
             f = open("test.py", "w+")
             f.writelines([
             "from selenium import webdriver \n",
+            "from selenium.webdriver.common.by import By \n",
             "from selenium.webdriver.chrome.options import Options \n", 
-            "chrome_options = Options() \n",
-            "chrome_options.add_argument(\"--headless\") \n",
+            "options = Options() \n",
+            "options.add_argument(\"--headless\") \n",
+            "user_agent = \'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.50 Safari/537.36\' \n", 
+            "options.add_argument(f\'user-agent={user_agent}\') \n",
             "import csv \n",
             "from selenium.webdriver.common.by import By \n"
-            "driver = webdriver.Chrome(executable_path=r'C:\\Users\\Home\\seleniumdrivers\\chromedriver.exe') \n",
+            "driver = webdriver.Chrome(executable_path=r'C:\\Users\\Home\\seleniumdrive\\chromedriver.exe', options=options) \n",
             f"driver.get('{link}') \n"
-            "driver.implicitly_wait(5) \n",
-            "doi = driver.find_element(\"xpath\", '//a[contains(text(), \"doi\")]') \n" ,
+            "doi = driver.find_element(By.CSS_SELECTOR, \"span div a\") \n" ,
             "doi = doi.text \n",
             "doi = doi.removeprefix(\"https://doi.org/\") \n",
             "uprint(doi) \n",
@@ -44,7 +49,7 @@ def fetchAPAdois():
     apadois = apadois.drop_duplicates()
     apadois.to_csv("apadois.csv", index=None)
 
-#fetch title and abstract and store in a file with doi, title, and abstract
+#fetch title and abstract from all apadois.csv and store doi, title, and abstract of APA papers in apadata.csv
 def fetchAPAdata(): 
     doisdf = pd.read_csv("apadois.csv")
     dois = doisdf["DOI"].tolist()
@@ -54,12 +59,15 @@ def fetchAPAdata():
             "from selenium import webdriver \n",
             "from selenium.webdriver.chrome.options import Options \n", 
             "from selenium.common.exceptions import NoSuchElementException \n",
+            "options = Options() \n",
+            "options.add_argument(\"--headless\") \n",
+            "user_agent = \'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.50 Safari/537.36\' \n", 
+            "options.add_argument(f\'user-agent={user_agent}\') \n",
             "import csv \n",
             "from selenium.webdriver.common.by import By \n"
             "try: \n"
-            "\tdriver = webdriver.Chrome(executable_path=r'C:\\Users\\Home\\seleniumdrivers\\chromedriver.exe') \n",
+            "\tdriver = webdriver.Chrome(executable_path=r'C:\\Users\\Home\\seleniumdrivers\\chromedriver.exe', options=options) \n",
             f"\tdriver.get('http://doi.org/{doi}') \n"
-            "\tdriver.implicitly_wait(5) \n",
             "\ttitle = driver.find_element(By.CSS_SELECTOR, \"h2 a span\") \n", 
             "\tabstract = driver.find_element(By.CLASS_NAME, \"abstract\") \n",
             "\tuprint(title.text) \n"
@@ -80,17 +88,5 @@ def fetchAPAdata():
     apadata.to_csv("apadata.csv", index=None)
 fetchAPAdois()
 fetchAPAdata()
+os.remove("test.py")
 
-#headless options
-# "chrome_options = Options() \n",
-# "chrome_options.add_argument('--lang=en_US') \n", 
-# "chrome_options.add_argument(\"--no-sandbox\") \n"
-# "chrome_options.add_argument(\"--headless\") \n",
-# "chrome_options.add_argument('--disable-gpu') \n", 
-# "chrome_options.add_argument(\"--disable-extensions\") \n",             
-# "chrome_options.add_argument(\"--window-size=1920,1080\") \n",
-# "chrome_options.add_argument(\"start-maximized\") \n",
-# "chrome_options.add_experimental_option(\"excludeSwitches\", [\"enable-automation\"]) \n",
-# "chrome_options.add_experimental_option(\"useAutomationExtension\", False) \n",
-# "chrome_options.add_argument(\"--proxy-server='direct://'\"); \n",
-# "chrome_options.add_argument(\"--proxy-bypass-list=*\"); \n",
