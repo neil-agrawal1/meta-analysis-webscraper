@@ -5,7 +5,7 @@ Type in key words related to the topic you are researching. This repository scra
 
 Once a csv file with relevant papers is generated, run the project through [ASReview Lab](https://asreview.nl/), an active learning software that screens large amounts of text, to generate the most useful papers. 
 
-To run the program, use a bash terminal and type bash runall.sh. 
+To run the program, use a bash terminal and type `bash runall.sh`. 
 ## Set Up
 To scrape google scholar, you will need a [scraperAPI](https://www.scraperapi.com/) key. Just use the free trial, you will have enough free credits to run the program. 
 You don't need scraperAPI to scrape CrossRef or PubMed
