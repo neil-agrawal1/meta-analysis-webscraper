@@ -10,6 +10,14 @@ options.add_experimental_option("excludeSwitches", ["enable-automation"])
 options.add_experimental_option("useAutomationExtension", False)
 options.add_argument("--headless")
 options.add_argument("--disable-gpu")
+prefs = {
+    "download.open_pdf_in_system_reader": False,
+    "download.prompt_for_download": True,
+    "download.default_directory": "/dev/null",
+    "plugins.always_open_pdf_externally": False}
+options.add_experimental_option(
+    "prefs", prefs
+)
 s = Service("C:\\Users\\Home\\seleniumdrivers\\chromedriver.exe")
 
 df = pd.read_csv("scholar/scholar.csv")
@@ -34,7 +42,7 @@ def fetchDOIfromURL():
             titles.append(title)
             print(doi)
             print(title)
-            driver.set_page_load_timeout(7)
+            driver.set_page_load_timeout(5)
         except NoSuchElementException:
             continue
     driver.quit()

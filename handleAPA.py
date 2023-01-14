@@ -36,7 +36,7 @@ def fetchAPAdois():
             "doi = doi.text \n",
             "doi = doi.removeprefix(\"https://doi.org/\") \n",
             "uprint(doi) \n",
-            "with open (\"apadois.csv\", \"a\", newline=\"\", encoding=\"utf-8\") as f: \n" ,
+            "with open (\"datafiles/apadois.csv\", \"a\", newline=\"\", encoding=\"utf-8\") as f: \n" ,
                 "\tthewriter = csv.writer(f) \n",
                 "\tthewriter.writerow([doi])"
                 ])
@@ -45,13 +45,13 @@ def fetchAPAdois():
             exec(open("test.py").read())
             os.remove("test.py")
     
-    apadois = pd.read_csv("apadois.csv", encoding="latin", index_col=False)
+    apadois = pd.read_csv("datafiles/apadois.csv", encoding="latin", index_col=False)
     apadois = apadois.drop_duplicates()
-    apadois.to_csv("apadois.csv", index=None)
+    apadois.to_csv("datafiles/apadois.csv", index=None)
 
 #fetch title and abstract from all apadois.csv and store doi, title, and abstract of APA papers in apadata.csv
 def fetchAPAdata(): 
-    doisdf = pd.read_csv("apadois.csv")
+    doisdf = pd.read_csv("datafiles/apadois.csv")
     dois = doisdf["DOI"].tolist()
     for doi in dois: 
             f = open("test.py", "w+")
@@ -72,7 +72,7 @@ def fetchAPAdata():
             "\tabstract = driver.find_element(By.CLASS_NAME, \"abstract\") \n",
             "\tuprint(title.text) \n"
             "\tuprint(abstract.text) \n",
-            "\twith open (\"apadata.csv\", \"a+\", newline=\"\", encoding=\"utf-8\") as f: \n" ,
+            "\twith open (\"datafiles/apadata.csv\", \"a+\", newline=\"\", encoding=\"utf-8\") as f: \n" ,
                 "\t\tthewriter = csv.writer(f) \n",
                 f"\t\tthewriter.writerow(['{doi}', title.text, abstract.text]) \n"
             "except NoSuchElementException: \n"
@@ -83,10 +83,8 @@ def fetchAPAdata():
             exec(open("test.py").read())
             os.remove("test.py")
 
-    apadata = pd.read_csv("apadata.csv", encoding="latin", index_col=False)
+    apadata = pd.read_csv("datafiles/apadata.csv", encoding="latin", index_col=False)
     apadata = apadata.drop_duplicates()
-    apadata.to_csv("apadata.csv", index=None)
+    apadata.to_csv("datafiles/apadata.csv", index=None)
 fetchAPAdois()
 fetchAPAdata()
-os.remove("test.py")
-

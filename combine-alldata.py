@@ -17,13 +17,15 @@ pubmed_df = pubmed_df[~pubmed_df['DOI'].str.contains("No DOI")]
 scholar_df = scholar_df.dropna(axis=0)
 
 def combineAllData(): 
-    papers = pd.read_csv("papers.csv", encoding="latin", index_col=None)
-    apapapers = pd.read_csv("apadata.csv", encoding="latin", header=None)
+    papers = pd.read_csv("datafiles/prelimpapers.csv", encoding="latin", index_col=None)
+    apapapers = pd.read_csv("datafiles/apadata.csv", encoding="latin", header=None)
     apapapers.columns = ["DOI", "Title", "Abstract"]
     allpapers = pd.concat([papers, apapapers], axis=0, ignore_index=True)
     allpapers = allpapers.drop_duplicates(subset=['Title'], keep="first")
     allpapers = allpapers.drop_duplicates(subset=['DOI'], keep="first")
-    allpapers.to_csv("allpapers.csv", index=None)
+    allpapers.to_csv("papers.csv", index=None)
 
 combineAllData()
+print("Hello")
+
 

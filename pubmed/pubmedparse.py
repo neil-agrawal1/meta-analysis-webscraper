@@ -4,8 +4,6 @@ import sys
 from csv import writer
 import pandas as pd
 
-# from crossref.crossrefparse import apapsychdois
-
 # sys.path.insert(0, 'c:\\Users\\Home\\python-projects\\meta-analysis-webscraper\\crossref')
 # print(sys.path)
 def uprint(*objects, sep=" ", end="\n", file=sys.stdout):
@@ -74,4 +72,4 @@ fetchPubMedData()
 df = pd.DataFrame(list(zip(dois, titles)), columns=["DOI", "Title"])
 apadf = pd.DataFrame(apadois, columns=["DOI"])
 df.to_csv("pubmed/pubmeddata.csv", index=None)
-apadf.to_csv("apadois.csv", mode="a+", index=None, header=None)
+apadf.to_csv("datafiles/apadois.csv", mode="a+", index=None, header=None)

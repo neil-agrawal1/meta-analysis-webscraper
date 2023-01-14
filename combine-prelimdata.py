@@ -20,6 +20,6 @@ scholar_df = scholar_df.dropna(axis=0)
 def combinePrelimData():
     prelimdata = pd.concat([pubmed_df, crossref_df, scholar_df], axis=0, ignore_index=True, verify_integrity=True)
     prelimdata = prelimdata.drop_duplicates(subset=['DOI'], keep="first")
-    prelimdata.to_csv('prelimdata.csv', index=None)
+    prelimdata.to_csv('datafiles/prelimdata.csv', index=None)
 
 combinePrelimData()

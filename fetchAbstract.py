@@ -24,7 +24,7 @@ def cleanhtml(raw_html):
     cleantext = re.sub(CLEANR, '', raw_html)
     return cleantext 
 
-df1 = pd.read_csv("prelimdata.csv")
+df1 = pd.read_csv("datafiles/prelimdata.csv")
 abstracts = []
 print(df1["DOI"])
 def fetchAbstract(): 
@@ -108,7 +108,7 @@ df2 = pd.DataFrame(abstracts, columns=["Abstract"])
 print(df2.columns)
 papers = pd.concat([df1, df2], axis = 1, ignore_index=True)
 print(papers.columns)
-papers.to_csv("papers.csv", index=None, header=["DOI", "Title", "Abstract"])
+papers.to_csv("datafiles/prelimpapers.csv", index=None, header=["DOI", "Title", "Abstract"])
 #if you want to remove all the no abstracts from the list, just filter through 
 #the papers datafram and remove any row that has "No abstract" in it
 #purepapers = papers[~papers["Abstract"].str.contains("No")]["Abstract"]
