@@ -12,7 +12,7 @@ def uprint(*objects, sep=' ', end='\n', file=sys.stdout):
 
 
 Entrez.email="lenter360@gmail.com"
-handle = Entrez.esearch(db="pubmed", term="wbtb mild lucid dreaming", retmax="300", retmode="xml",)
+handle = Entrez.esearch(db="pubmed", term="wbtb mild lucid dreaming induction", retmax="300", retmode="xml",)
 rec_list = Entrez.read(handle)
 id_list = rec_list['IdList']
 

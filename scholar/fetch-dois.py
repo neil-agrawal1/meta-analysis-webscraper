@@ -12,7 +12,7 @@ options.add_argument("--headless")
 options.add_argument("--disable-gpu")
 prefs = {
     "download.open_pdf_in_system_reader": False,
-    "download.prompt_for_download": True,
+    "download.prompt_for_download": False,
     "download.default_directory": "/dev/null",
     "plugins.always_open_pdf_externally": False}
 options.add_experimental_option(
@@ -22,7 +22,7 @@ s = Service("C:\\Users\\Home\\seleniumdrivers\\chromedriver.exe")
 
 df = pd.read_csv("scholar/scholar.csv")
 urls = df[~df["Link"].str.contains("apa.org" and "None")]["Link"].tolist()
-
+ 
 scholarinfo = pd.read_csv("scholar/scholar.csv", index_col=False)
 dois = []
 titles = []

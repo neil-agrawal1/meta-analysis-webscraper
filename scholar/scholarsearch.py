@@ -6,7 +6,7 @@ success = pg.ScraperAPI(API_KEY)
 print(success)
 scholarly.use_proxy(pg)
 
-search_query = scholarly.search_pubs("wbtb mild lucid dreaming")
+search_query = scholarly.search_pubs("wbtb mild lucid dreaming induction")
 # add user input feature for searching google scholar
 
 
